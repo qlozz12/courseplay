@@ -5,9 +5,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 	<link rel="author" href="../../humans.txt" />
 	<link rel="stylesheet" href="../../res/css/reset.css">
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="../../res/fonts/adelle/stylesheet.css" type="text/css" charset="utf-8">
-	<link rel="stylesheet" href="../../res/fonts/caslon/stylesheet.css" type="text/css" charset="utf-8">
 	<link rel="stylesheet" href="../../res/css/base.css">
 	<!--[if lte IE 7]><script src="res/js/lte-ie7.js"></script><![endif]-->
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -27,37 +24,56 @@
 
 <body>
 <div id="container">
-	<header>
-		<h1><a class="imgLink" href="../index.html"><img src="../../res/img/cp_logo.png" alt="Courseplay"></a></h1>
-	</header>
-	
-	<section id="navSection">
-		<nav id="mainNav">
-			<li class="active">Installation</li>
-			<li><a href="../manual/index.html">Manual<span class="info">How does Courseplay work? How do I &hellip;?</span></a></li>
-			<li><a href="../faq/index.html">FAQ<span class="info">What else is there to know?</span></a></li>
-			<li><a href="../changelog/index.html">Changelog<span class="info">What's new, pussycat?</span></a></li>
-			<li><a href="../authors/index.html">Authors<span class="info">Who's the team?</span></a></li>
-		</nav>
-	</section>
+	<nav id="navSidebar">
+		<li id="navHome"><a class="imgLink" href="../index.html"><img id="cpLogo" src="../../res/img/courseplayLogoDark.png" alt="Courseplay" /></a></li>
+		<li id="navInstallation" class="hasNavIcon active"><span>Installation</span></li>
+		<li id="navManual" class="hasNavIcon"><a href="../manual/index.html">Manual</a></li>
+		<li id="navFAQ" class="hasNavIcon"><a href="../faq/index.html">FAQ</a></li>
+		<li id="navChangelog" class="hasNavIcon"><a href="../changelog/index.html">Changelog</a></li>
+		<li id="navAuthors" class="hasNavIcon"><a href="../authors/index.html">Authors</a></li>
+	</nav>
 
-	<section id="installation" class="content">
-		<h2>Installation</h2>
-		<p>Copy the archive file <code>ZZZ_courseplay.zip</code> to the folder <code>C:\Users\<span style="font-style:italic; font-weight:bold;">[Username]</span>\My Documents\MyGames\FarmingSimulator2013\mods</code>. That's all, folks!</p>
-		<p>In order to install the developer version, the downloaded zip file needs to be unpacked. The <span style="font-weight:bold;">content</span> of the <code>courseplay-master</code> folder must then be packed (archived) into a new zip file by the name of <code>ZZZ_courseplay.zip</code>. After that, proceed as usual (see above).</p>
-	</section>
+	<!----------------------------------------------------------------------------------------------->
 
+	<main role="main" class="content">
+		<article id="installation">
+			<h1>Installation</h1>
+
+			<hr />
+
+			<h2>Installing the released version</h2>
+			<p>Copy the archive file <code>ZZZ_courseplay.zip</code> to your mods folder. That's all, folks!</p>
+			<p>
+				The mods folder is located at:<br />
+				<ul>
+					<li><span class="emphasize1">Windows</span> <span class="emphasize2">(7 and above)</span>:</li>
+					<li><pre>C:\Users\<span class="emphasize3">[USER NAME]</span>\My Documents\MyGames\FarmingSimulator2015\mods</pre></li>
+					<li><span class="emphasize1">Mac OS X</span> <span class="emphasize2">(Download/DVD/Steam-Version)</span>:</li>
+					<li><pre>/Users/<span class="emphasize3">[USER NAME]</span>/Library/Application Support/FarmingSimulator2015</pre></li>
+					<li><span class="emphasize1">Mac OS X</span> <span class="emphasize2">(X 10.7 and above)</span>:</li>
+					<li><pre>/Users/<span class="emphasize3">[USER NAME]</span>/Library/Containers/com.focus-home.farmingsim2015/Data/Library/Application Support/FarmingSimulator2015</pre></li>
+				</ul>
+			</p>
+
+			<hr />
+
+			<h2>Installing the developer version</h2>
+			<p>Unpack the downloaded the zip file to a folder of your choosing. Inside, you will find a folder named <code>courseplay-master</code>. Archive the <span class="emphasize1">content</span> of that folder to a new zip file named <code>ZZZ_courseplay.zip</code>. Then proceed installing it as described for the released version (see above).</p>
+		</article>
+	</main>
+
+	<!----------------------------------------------------------------------------------------------->
 
 	<footer>
-		<span>&copy; Courseplay, 2014</span>
-		<nav id="footerNav">
+		<div>&copy; Courseplay, 2014</div>
+		<ul id="navFooter">
 			<li><a href="https://github.com/Courseplay/courseplay">GitHub</a></li>
 			<li><a href="https://www.pivotaltracker.com/projects/675867#">Bug Tracker</a></li>
 			<li><a href="https://github.com/Courseplay/courseplay/issues?sort=created&state=open">GitHub Issue Tracker</a></li>
 			<li><a href="../../de/installation/index.html">Deutsche Version</a></li>
 			<li><a href="../../index.html">Home</a></li>
-		</nav>
-	</footer>	
+		</ul>
+	</footer>
 </div> <!-- #container -->
 </body>
 </html>
