@@ -6,12 +6,12 @@ CP = {};
 CP.animationTime = 250;
 CP.el = {
 	secChangelog: $('#changelog'),
-	changelogVersions: $('div.changelogVersion')
+	singleChangelogs: $('.singleChangelog')
 };
-CP.el.changelogTitles = CP.el.changelogVersions.find('h3')
-CP.el.changelogContent = CP.el.changelogVersions.find('.changelogContent');
-CP.el.changelogVersions.filter(':first').find('.changelogContent').addClass('open');
-CP.el.changelogVersions.not(':first').find('.changelogContent').addClass('closed');
+CP.el.changelogTitles = CP.el.singleChangelogs.find('h3');
+CP.el.changelogContent = CP.el.singleChangelogs.find('.changelogContent');
+CP.el.singleChangelogs.filter(':first').find('.changelogContent').addClass('open');
+CP.el.singleChangelogs.not(':first').find('.changelogContent').addClass('closed');
 
 CP.el.changelogTitles.on('click', function(evt) {
 	var t = $(this),
@@ -21,7 +21,7 @@ CP.el.changelogTitles.on('click', function(evt) {
 	CP.el.changelogContent.removeClass('open').addClass('closed');
 	if (!isOpen) {
 		thisContent.removeClass('closed').addClass('open');
-		scrollTo('#' + t.parents('.changelogVersion').attr('id'));
+		scrollTo('#' + t.parents('.singleChangelog').attr('id'));
 	};
 });
 
