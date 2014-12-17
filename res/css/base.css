@@ -88,7 +88,9 @@ img {
 	background-color:#333;
 	color:#FC0;
 }
-#navSidebar li { font-weight:300; margin:0 0 0.7em; position:relative; }
+#navSidebar li { font-weight:300; margin:0 0 0.7em; position:relative; border-left:5px solid transparent; }
+#navSidebar li.hasNavIcon { height:36px; padding-left:1em; }
+#navSidebar li.hasNavIcon:not(.active):hover { border-color:#333; }
 #navSidebar li.active { cursor:default; font-weight:bold; }
 .hasNavIcon a, .hasNavIcon span { bottom:7px; margin-left:0.3em; padding:2px 4px; position:relative; }
 #navHome 		 { list-style:none; }
@@ -119,7 +121,7 @@ main hr {
 	margin:3rem 0;
 	width:100%;
 }
-main article hr {
+main section hr, main article hr {
 	margin:1rem 0;
 }
 
@@ -284,7 +286,7 @@ ol ol li:last-child { margin-bottom:0; }
 
 
 footer { 
-	background:rgba(0,0,0,0.5);
+	background:rgba(0,0,0,0.9);
 	font-size:0.8em;
 	padding:0.7em 0 0.7em 27rem;
 	height:5rem;
