@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'courseplay';
-	src:url('fonts/courseplay.eot?lincqa');
-	src:url('fonts/courseplay.eot?#iefixlincqa') format('embedded-opentype'),
-		url('fonts/courseplay.woff?lincqa') format('woff'),
-		url('fonts/courseplay.ttf?lincqa') format('truetype'),
-		url('fonts/courseplay.svg?lincqa#courseplay') format('svg');
+	src:url('fonts/courseplay.eot?-wugux9');
+	src:url('fonts/courseplay.eot?#iefix-wugux9') format('embedded-opentype'),
+		url('fonts/courseplay.woff?-wugux9') format('woff'),
+		url('fonts/courseplay.ttf?-wugux9') format('truetype'),
+		url('fonts/courseplay.svg?-wugux9#courseplay') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -53,7 +53,7 @@
 .icon-arrow-up:before {
 	content: "\e610";
 }
-.icon-uniE611:before {
+.icon-arrow-right:before {
 	content: "\e611";
 }
 .icon-question:before {
@@ -74,14 +74,14 @@
 .icon-manual:before {
 	content: "\e603";
 }
+.icon-cog:before {
+	content: "\f013";
+}
 .icon-settings:before {
 	content: "\e604";
 }
 .icon-authors:before {
 	content: "\e61c";
-}
-.icon-cog:before {
-	content: "\f013";
 }
 .icon-autorenew:before {
 	content: "\e605";

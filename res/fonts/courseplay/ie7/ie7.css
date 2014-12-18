@@ -28,7 +28,7 @@
 .icon-arrow-up {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe610;');
 }
-.icon-uniE611 {
+.icon-arrow-right {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe611;');
 }
 .icon-question {
@@ -49,14 +49,14 @@
 .icon-manual {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe603;');
 }
+.icon-cog {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf013;');
+}
 .icon-settings {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe604;');
 }
 .icon-authors {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61c;');
-}
-.icon-cog {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf013;');
 }
 .icon-autorenew {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe605;');

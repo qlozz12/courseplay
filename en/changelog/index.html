@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="../../res/css/reset.css">
 	<link rel="stylesheet" href="../../res/css/base.css">
 	<link rel="stylesheet" href="../../res/fonts/courseplay/style.css">
+	<link rel="stylesheet" href="../../res/css/nav.css">
 	<link rel="stylesheet" href="../../res/css/changelog.css">
 	<!--[if lte IE 7]><script src="res/js/lte-ie7.js"></script><![endif]-->
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -26,32 +27,44 @@
 
 <body>
 <div id="container">
-	<nav id="navSidebar">
-		<div id="navHome"><a class="imgLink" href="../index.html"><img id="cpLogo" src="../../res/img/courseplayLogoDark.png" alt="Courseplay" /></a></div>
-		<hr />
-		<ul>
-			<li id="navInstallation">
-				<span class="icon-installation"></span>
-				<a href="../installation/index.html">Installation</a>
-			</li>
-			<li id="navManual">
-				<span class="icon-manual"></span>
-				<a href="../manual/index.html">Manual</a>
-			</li>
-			<li id="navFAQ" class="active">
-				<span class="icon-faq"></span>
-				<a href="../faq/index.html">FAQ</a>
-			</li>
-			<li id="navChangelog">
-				<span class="icon-changelog"></span>
-				<a href="../changelog/index.html">Changelog</a>
-			</li>
-			<li id="navAuthors">
-				<span class="icon-authors"></span>
-				<a href="../authors/index.html">Authors</a>
-			</li>
-		</ul>
-	</nav>
+	<div id="navContainer">
+		<nav id="navSidebar">
+			<div id="navHome"><a class="imgLink" href="../index.html"><img id="cpLogo" src="../../res/img/courseplayLogoDark.png" alt="Courseplay" /></a></div>
+			<hr />
+			<ul>
+				<li id="navInstallation">
+					<a href="../installation/index.html">
+						<span class="icon-installation"></span>
+						<span>Installation</span>
+					</a>
+				</li>
+				<li id="navManual">
+					<a href="../manual/index.html#intro">
+						<span class="icon-cog"></span>
+						<span>Manual</span>
+					</a>
+				</li>
+				<li id="navFAQ">
+					<a href="../faq/index.html">
+						<span class="icon-faq"></span>
+						<span>FAQ</span>
+					</a>
+				</li>
+				<li id="navChangelog" class="active">
+					<a href="../changelog/index.html">
+						<span class="icon-changelog"></span>
+						<span>Changelog</span>
+					</a>
+				</li>
+				<li id="navAuthors" class="last">
+					<a href="../authors/index.html">
+						<span class="icon-authors"></span>
+						<span>Authors</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
 
 	<!----------------------------------------------------------------------------------------------->
 

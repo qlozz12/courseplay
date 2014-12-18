@@ -84,6 +84,7 @@
 	width:70%;
 }
 #navSidebar ul ul {
+	box-shadow:0 0 0.5em rgba(0,0,0,0.4);
 	width:100%;
 }
 #navSidebar > ul > li > a {
@@ -129,7 +130,8 @@
 	border:1px solid #DA0;
 }
 #navSidebar ul ul a {
-	font-size:0.8em;
+	font-size:0.7em;
+	padding:0.5em 1em;
 }
 #navSidebar ul ul li {
 	border-bottom:1px solid #DA0;
