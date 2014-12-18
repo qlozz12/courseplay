@@ -1,15 +1,6 @@
 ;(function ($) { $(document).ready(function () {
 $('body').removeClass('no-js').addClass('js');
 
-/*
-$('#navSidebar > ul').slicknav({
-	easingOpen: 'linear',
-	easingClose: 'linear',
-	allowParentLinks: true
-});
-*/
-
-
 
 
 /**

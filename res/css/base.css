@@ -66,11 +66,11 @@ img {
 
 
 /* SIDEBAR NAV */
-#navSidebar {
+#navContainer {
 	background:#FC0;
 	background:url('../img/noise_128x128_0.05.png') repeat #FC0;
 	color:#333;
-	padding:5em 2em 0;
+	padding:2em;
 	width:19em;
 	z-index:3;
 
@@ -91,25 +91,15 @@ img {
 #navSidebar > ul { list-style:none; }
 #navSidebar > ul > li { font-weight:300; margin:0 0 0.7em; position:relative; }
 /* #navSidebar > ul > li.hasNavIcon:not(.hasSub) { height:36px; } */
-#navSidebar > ul > li.active > span.text { cursor:default; font-weight:bold; }
+#navSidebar > ul > li.active > a span:last-of-type { cursor:default; font-weight:bold; }
 
-#navSidebar > ul > li > a { /* height:36px; */ width:auto; }
-#navSidebar > ul > li > a, #navSidebar > ul > li > span.text { margin-left:0.3em; padding:2px 4px; }
+#navSidebar > ul > li > a, #navSidebar > ul > li > span.text { }
 #navSidebar span[class^="icon-"] {
 	display:inline-block;
-	font-size:1.3em;
+	font-size:1em;
+	margin-right:0.6em;
 	width:1em;
 }
-#navSidebar > ul > li a { position:relative; }
-#navSidebar > ul > li a:not(.imgLink):before {
-	content:'';
-	border-left:5px solid #333;
-	display:block;
-	opacity:0;
-	height:1.7em; width:0;
-	position:absolute; left:-68px; top:-5px;
-}
-#navSidebar > ul > li a:not(.imgLink):hover:before { opacity:1; }
 
 
 #navSidebar hr {

@@ -7,7 +7,9 @@
 	<link rel="stylesheet" href="../../res/css/reset.css">
 	<link rel="stylesheet" href="../../res/css/base.css">
 	<link rel="stylesheet" href="../../res/fonts/courseplay/style.css">
+	<link rel="stylesheet" href="../../res/css/nav.css">
 	<link rel="stylesheet" href="../../res/css/manual.css">
+	<!--<link rel="stylesheet" href="../../res/css/manual.css">-->
 	<!--[if lte IE 7]><script src="res/js/lte-ie7.js"></script><![endif]-->
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -29,76 +31,82 @@
 
 <body class="no-js">
 <div id="container">
-	<nav id="navSidebar">
-		<div id="navHome"><a class="imgLink" href="../index.html"><img id="cpLogo" src="../../res/img/courseplayLogoDark.png" alt="Courseplay" /></a></div>
-		<hr />
-		<ul>
-			<li id="navInstallation">
-				<span class="icon-installation"></span>
-				<a href="../installation/index.html">Installation</a>
-			</li>
-			<li id="navManual" class="active hasSub">
-				<span class="icon-manual"></span>
-				<span class="text">Manual</span>
-				<ul>
-					<li>
-						<a href="#controls"><span>Controls</span></a>
-					</li>
-					<li class="hasSub">
-						<a href="#hud">
-							<span class="icon-triangle"></span>
-							<span>HUD</span>
-						</a>
-						<ul>
-							<li><a href="#hud_driverControls"><span>Driver controls</span></a></li>
-							<li><a href="#hud_saveCourse"><span>Save course</span></a></li>
-							<li><a href="#hud_manageCourses"><span>Manage courses</span></a></li>
-							<li><a href="#hud_mode2settings"><span>Combi mode settings</span></a></li>
-							<li><a href="#hud_manageCombine"><span>Manage combines</span></a></li>
-							<li><a href="#hud_speeds"><span>Speeds</span></a></li>
-							<li><a href="#hud_generalSettings"><span>General settings</span></a></li>
-							<li><a href="#hud_drivingSettings"><span>Drive and work settings</span></a></li>
-							<li><a href="#hud_courseGeneration"><span>Course generation</span></a></li>
-							<li><a href="#hud_shovelSettings"><span>Shovel positions</span></a></li>
-							<li><a href="#hud_combineSettings"><span>Combine controls</span></a></li>
-						</ul>
-					</li>
-					<li class="hasSub">
-						<a href="#driveModes">
-							<span class="icon-triangle"></span>
-							<span>Driving modes</span>
-						</a>
-						<ul>
-							<li><a href="#driveMode1"><span>Driver</span></a></li>
-							<li><a href="#driveMode2"><span>Combi</span></a></li>
-							<li><a href="#driveMode3"><span>Overloader</span></a></li>
-							<li><a href="#driveMode4"><span>Fertilizing and Seeding</span></a></li>
-							<li><a href="#driveMode5"><span>Transfer</span></a></li>
-							<li><a href="#driveMode6"><span>Field work</span></a></li>
-							<li><a href="#driveMode7"><span>Combine self unloading</span></a></li>
-							<li><a href="#driveMode8"><span>Liquid manure transporter</span></a></li>
-							<li><a href="#driveMode9"><span>Shovel filling and emptying</span></a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#generateCourse"><span>Generate course</span></a>
-					</li>
-				</ul>
-			</li>
-			<li id="navFAQ">
-				<span class="icon-faq"></span>
-				<a href="../faq/index.html">FAQ</a>
-			</li>
-			<li id="navChangelog">
-				<span class="icon-changelog"></span>
-				<a href="../changelog/index.html">Changelog</a>
-			</li>
-			<li id="navAuthors">
-				<span class="icon-authors"></span>
-				<a href="../authors/index.html">Authors</a>
-			</li>
-		</ul>
-	</nav>
+	<div id="navContainer">
+		<nav id="navSidebar">
+			<div id="navHome"><a class="imgLink" href="../index.html"><img id="cpLogo" src="../../res/img/courseplayLogoDark.png" alt="Courseplay" /></a></div>
+			<hr />
+			<ul>
+				<li id="navInstallation">
+					<a href="../installation/index.html">
+						<span class="icon-installation"></span>
+						<span>Installation</span>
+					</a>
+				</li>
+				<li class='active has-sub'>
+					<a href='#intro'>
+						<span class="icon-manual"></span>
+						<span>Manual</span>
+					</a>
+					<ul>
+						<li>
+							<a href="#controls"><span>Controls</span></a>
+						</li>
+						<li class='has-sub'>
+							<a href='#hud'><span>HUD</span></a>
+							<ul>
+								<li><a href="#hud_driverControls"><span>Driver controls</span></a></li>
+								<li><a href="#hud_saveCourse"><span>Save course</span></a></li>
+								<li><a href="#hud_manageCourses"><span>Manage courses</span></a></li>
+								<li><a href="#hud_mode2settings"><span>Combi mode settings</span></a></li>
+								<li><a href="#hud_manageCombine"><span>Manage combines</span></a></li>
+								<li><a href="#hud_speeds"><span>Speeds</span></a></li>
+								<li><a href="#hud_generalSettings"><span>General settings</span></a></li>
+								<li><a href="#hud_drivingSettings"><span>Drive and work settings</span></a></li>
+								<li><a href="#hud_courseGeneration"><span>Course generation</span></a></li>
+								<li><a href="#hud_shovelSettings"><span>Shovel positions</span></a></li>
+								<li class="last"><a href="#hud_combineSettings"><span>Combine controls</span></a></li>
+							</ul>
+						</li>
+						<li class='has-sub'>
+							<a href="#driveModes"><span>Driving modes</span></a>
+							<ul>
+								<li><a href="#driveMode1"><span>Grain transport</span></a></li>
+								<li><a href="#driveMode2"><span>Combi</span></a></li>
+								<li><a href="#driveMode3"><span>Overloader</span></a></li>
+								<li><a href="#driveMode4"><span>Fertilizing and Seeding</span></a></li>
+								<li><a href="#driveMode5"><span>Transfer</span></a></li>
+								<li><a href="#driveMode6"><span>Field work</span></a></li>
+								<li><a href="#driveMode7"><span>Combine self unloading</span></a></li>
+								<li><a href="#driveMode8"><span>Liquid manure transporter</span></a></li>
+								<li class="last"><a href="#driveMode9"><span>Shovel filling and emptying</span></a></li>
+							</ul>
+						</li>
+						<li class="last">
+							<a href="#generateCourse"><span>Generate course</span></a>
+						</li>
+					</ul>
+				</li>
+				<li id="navFAQ">
+					<a href="../faq/index.html">
+						<span class="icon-faq"></span>
+						<span>FAQ</span>
+					</a>
+				</li>
+				<li id="navChangelog">
+					<a href="../changelog/index.html">
+						<span class="icon-changelog"></span>
+						<span>Changelog</span>
+					</a>
+				</li>
+				<li id="navAuthors" class="last">
+					<a href="../authors/index.html">
+						<span class="icon-authors"></span>
+						<span>Authors</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div> <!-- END #navContainer -->
 
 	<!----------------------------------------------------------------------------------------------->
 
@@ -817,7 +825,6 @@
 
 <!-- Scripts -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="../../res/js/jquery.slicknav.min.js"></script>
 <script src="../../res/js/manual.js"></script>
 </body>
 </html>

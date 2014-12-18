@@ -1,16 +1,3 @@
-#navManual {
-	height:auto !important;
-}
-
-
-#navManual > ul {
-	margin-left:0.8em;
-}
-#navManual .icon-triangle { font-size:0.8em !important; }
-#navManual > ul > li li { display:none; }
-
-#navManual > ul > li { margin-left:1.1em; }
-
 
 
 #manual h1 { position:relative; }
@@ -23,11 +10,12 @@
 	bottom: 7px;
 }
 
-.no-js .manualSection { display:none; }
-.no-js .manualSection:target { display:block; }
+article:target { display:block; }
+article:not(:target) { display:none; }
 
-.manualSection span[data-icon] { font-size:1.1em; margin:0 3px; }
-.manualSection span[data-icon].big { font-size:1.5em; position:relative; top:3px; }
+
+
+
 
 .buttonInfo {
 	background: #555; /* Old browsers */
