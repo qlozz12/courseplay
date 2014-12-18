@@ -49,6 +49,7 @@
 	top:-2px;
 	right:0;
 }
+#navSidebar ul li.hover > ul,
 #navSidebar ul li:hover > ul {
 	visibility:visible;
 	opacity:1;
@@ -94,13 +95,12 @@
 #navSidebar > ul > li > a {
 	border-right:4px solid #FC0;
 }
-#navSidebar > ul > li > a:hover {
-	/*color:#ffffff;*/
-}
 #navSidebar > ul > li.active a {
 	background:#FC0;
 }
+#navSidebar > ul > li a.hover,
 #navSidebar > ul > li a:hover,
+#navSidebar > ul > li.hover a,
 #navSidebar > ul > li:hover a {
 	background:#FC0;
 }
@@ -114,21 +114,8 @@
 	right:1em;
 	margin-top:-0.6em;
 }
-#navSidebar ul ul li.first {
-	-webkit-border-radius:0 3px 0 0;
-	-moz-border-radius:0 3px 0 0;
-	border-radius:0 3px 0 0;
-}
 #navSidebar ul ul li.last {
-	-webkit-border-radius:0 0 3px 0;
-	-moz-border-radius:0 0 3px 0;
-	border-radius:0 0 3px 0;
 	border-bottom:0;
-}
-#navSidebar ul ul {
-	-webkit-border-radius:0 3px 3px 0;
-	-moz-border-radius:0 3px 3px 0;
-	border-radius:0 3px 3px 0;
 }
 #navSidebar ul ul {
 	border:1px solid #DA0;
@@ -136,10 +123,76 @@
 #navSidebar ul ul a {
 	font-size:0.7em;
 	padding:0.5em 1em;
+	-webkit-border-radius:0 !important;
+	-moz-border-radius:0 !important;
+	border-radius:0 !important;
 }
 #navSidebar ul ul li {
 	border-bottom:1px solid #DA0;
 }
+#navSidebar ul ul li.hover > a,
 #navSidebar ul ul li:hover > a {
 	background:#DA0;
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1250px) {
+	#navContainer {
+		padding:1em;
+		width:12em;
+	}
+	#navSidebar > ul {
+		width:100%;
+	}
+	#navSidebar > ul > li {
+		margin:1em 0;
+	}
+	#navSidebar > ul a {
+		padding:0.5em 0.5em;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	#navContainer {
+		padding:0.5em 0.1em;
+		width:2.5em;
+	}
+	#navHome,
+	#navSidebar > hr,
+	#navSidebar > ul > li > a > span:nth-child(2) {
+		display:none;
+	}
+	#navSidebar ul ul {
+		min-width:8em !important;
+	}
+	#navSidebar > ul a {
+		/* padding:0.15em 0.25em; */
+	}
+	#navSidebar ul li.has-sub > a:after {
+		content:none; display:none;
+	}
+	#navSidebar ul ul ul {
+		width:15em !important;
+	}
+}
+
+@media only screen and (max-height: 700px) {
+	#navSidebar ul ul ul {
+		width:200%;
+		display:flex;
+		flex-wrap:wrap;
+		align-content:stretch !important;
+	}
+	#navSidebar ul ul ul li {
+		flex-basis:50%;
+		flex-grow:1;
+		display:block;
+	}
+	#navSidebar ul ul ul li, #navSidebar ul ul ul li a {
+		height:auto;
+	}
+	#navSidebar ul ul ul li:nth-of-type(2n) {
+		border-left:1px solid #DA0;
+	}
 }

@@ -8,6 +8,10 @@ a, a:before, a:after, button, button:before, div, fieldset, figure, h3, img, inp
 }
 
 /*** MAIN ***/
+.hover {
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;        
+}
 ::-moz-selection {
 	background: #353535;
 	color: #fc950a;
@@ -44,7 +48,8 @@ body {
 	color: #F0F0F0;
 	font-size: 100%;
 	font-weight:100;
-	width:75rem;
+	width:100%;
+	max-width:75rem;
 	margin:0;
 }
 a:not(.imgLink) {
@@ -53,7 +58,7 @@ a:not(.imgLink) {
 	text-decoration:none;
 	border-radius:2px;
 }
-a:not(.imgLink):hover, a:not(.imgLink):focus, a:not(.imgLink):active {
+a:not(.imgLink):hover, a.hover:not(.imgLink), a:not(.imgLink):focus, a:not(.imgLink):active {
 	background-color:#FC0;
 	color:#333;
 }
@@ -89,11 +94,10 @@ img {
 	color:#FC0;
 }
 #navSidebar > ul { list-style:none; }
-#navSidebar > ul > li { font-weight:300; margin:0 0 0.7em; position:relative; }
-/* #navSidebar > ul > li.hasNavIcon:not(.hasSub) { height:36px; } */
+#navSidebar > ul > li { font-weight:300; position:relative; }
+#navSidebar > ul > li.active > a { cursor:default; }
 #navSidebar > ul > li.active > a span:last-of-type { cursor:default; font-weight:bold; }
 
-#navSidebar > ul > li > a, #navSidebar > ul > li > span.text { }
 #navSidebar span[class^="icon-"] {
 	display:inline-block;
 	font-size:1em;
@@ -111,10 +115,9 @@ img {
 
 /* MAIN CONTENT */
 main {
-	margin-left:19em;
-	margin-right:0;
-	padding:5em 2em 0;
-	width:38em;
+	margin:0;
+	padding:5em 2em 0 21em;
+	width:100%;
 	z-index:1;
 }
 
@@ -166,6 +169,7 @@ h5 { font-size:1.2em; font-style:italic; margin:0 0 10px; }
 }
 .content pre {
 	white-space:pre-wrap;
+	word-wrap:break-word;
 }
 .content kbd {
 	display: inline;
@@ -240,7 +244,8 @@ ol ol li:last-child { margin-bottom:0; }
 
 
 .hudIcon {
-	background:url(../img/manualIcons_16px.png) 0 0 no-repeat scroll transparent;
+	background:url(../img/manualIcons.png) 0 0 no-repeat scroll transparent;
+	background-size:128px 182px; /* half the size of the orig image, because element is 16px instead of 32px */
 	display:inline-block;
 	height:16px;
 	margin:0 3px;
@@ -249,7 +254,8 @@ ol ol li:last-child { margin-bottom:0; }
 	width:16px;
 }
 .hudIcon[title] 	  { cursor:help; }
-.hudIcon.inline 	  { text-indent:-9999px; top:2px; }
+.hudIcon.inline 	  { text-indent:-9999px; top:9px; }
+.content p:last-child .hudIcon.inline { top:0; }
 /*
 .hudIcon.addCourse	  { background-position: -40px -220px; }
 .hudIcon.arrowDown	  { background-position:-112px -184px; }
@@ -306,9 +312,9 @@ ol ol li:last-child { margin-bottom:0; }
 
 footer {
 	background:rgba(0,0,0,0.9);
+	padding:0.7em 0 0.7em 26.25em; /* 26.25 = 21 / 0.8 (adjusting for footer's font size) */
 	font-size:0.8em;
-	padding:0.7em 0 0.7em 27rem;
-	height:5rem;
+	height:4.5em;
 	width:100%;
 	z-index:2;
 
@@ -322,4 +328,30 @@ footer {
 #navFooter li:last-of-type { border-right:0; padding-right:0; }
 #navFooter li:first-of-type { padding-left:0; }
 
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1250px) {
+	main {
+		padding:2.5em 2em 0 14em;
+	}
+
+	footer {
+		font-size:0.65em;
+		padding-left:21.54em; /* 21.54 = 14 / 0.65 (adjusting for footer's font size) */
+	}
+}
+
+@media only screen and (max-width: 850px) {
+	#navFooter li:nth-child(2), #navFooter li:nth-child(3) { display:none; } /* hide bug tracker and GitHub issue tracker */
+}
+
+@media only screen and (max-width: 650px) {
+	main {
+		padding:1em 1em 0 3em;
+	}
+	footer {
+		display:none; 
+	}
+}
 

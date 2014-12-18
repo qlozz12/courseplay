@@ -116,3 +116,8 @@ figcaption {
 .modeButton.mode8 { background-position:-112px -76px; }
 .modeButton.mode9 { background-position:-148px -76px; }
 
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 450px) {
+	#manualVersion { display:none; }
+}
