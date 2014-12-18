@@ -6,6 +6,7 @@
 	<link rel="author" href="../humans.txt" />
 	<link rel="stylesheet" href="../res/css/reset.css">
 	<link rel="stylesheet" href="../res/css/base.css">
+	<link rel="stylesheet" href="../res/css/nav.css">
 	<!--[if lte IE 7]><script src="res/js/lte-ie7.js"></script><![endif]-->
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<title>Courseplay</title>
@@ -24,14 +25,44 @@
 
 <body>
 <div id="container">
-	<nav id="navSidebar">
-		<li id="navHome"><a class="imgLink" href="index.html"><img id="cpLogo" src="../res/img/courseplayLogoDark.png" alt="Courseplay" /></a></li>
-		<li id="navInstallation" class="hasNavIcon"><a href="installation/index.html">Installation</a></li>
-		<li id="navManual" class="hasNavIcon"><a href="manual/index.html">Manual</a></li>
-		<li id="navFAQ" class="hasNavIcon"><a href="faq/index.html">FAQ</a></li>
-		<li id="navChangelog" class="hasNavIcon"><a href="changelog/index.html">Changelog</a></li>
-		<li id="navAuthors" class="hasNavIcon"><a href="authors/index.html">Authors</a></li>
-	</nav>
+	<div id="navContainer">
+		<nav id="navSidebar">
+			<div id="navHome"><img id="cpLogo" src="../res/img/courseplayLogoDark.png" alt="Courseplay" /></div>
+			<hr />
+			<ul>
+				<li id="navInstallation">
+					<a href="installation/index.html">
+						<span class="icon-installation"></span>
+						<span>Installation</span>
+					</a>
+				</li>
+				<li id="navManual">
+					<a href="manual/index.html#intro">
+						<span class="icon-cog"></span>
+						<span>Manual</span>
+					</a>
+				</li>
+				<li id="navFAQ">
+					<a href="faq/index.html">
+						<span class="icon-faq"></span>
+						<span>FAQ</span>
+					</a>
+				</li>
+				<li id="navChangelog">
+					<a href="changelog/index.html">
+						<span class="icon-changelog"></span>
+						<span>Changelog</span>
+					</a>
+				</li>
+				<li id="navAuthors" class="last">
+					<a href="authors/index.html">
+						<span class="icon-authors"></span>
+						<span>Authors</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
 
 	<!----------------------------------------------------------------------------------------------->
 
@@ -59,13 +90,12 @@
 	<!----------------------------------------------------------------------------------------------->
 
 	<footer>
-		<div>&copy; Courseplay, 2014</div>
+		<div>&copy; Courseplay Dev Team, 2014</div>
 		<ul id="navFooter">
 			<li><a href="https://github.com/Courseplay/courseplay">GitHub</a></li>
 			<li><a href="https://www.pivotaltracker.com/projects/675867#">Bug Tracker</a></li>
 			<li><a href="https://github.com/Courseplay/courseplay/issues?sort=created&state=open">GitHub Issue Tracker</a></li>
 			<li><a href="../de/index.html">Deutsche Version</a></li>
-			<li><a href="../index.html">Home</a></li>
 		</ul>
 	</footer>
 </div> <!-- #container -->

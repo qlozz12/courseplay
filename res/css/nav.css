@@ -1,3 +1,5 @@
+@import url('../fonts/courseplay/style.css');
+
 @charset "UTF-8";
 
 #navSidebar {
@@ -77,7 +79,7 @@
 	display:table;
 	clear:both;
 }
-#navSidebar a {
+#navSidebar > ul a {
 	display:block;
 	padding:0.7em 1em;
 	text-decoration:none;
