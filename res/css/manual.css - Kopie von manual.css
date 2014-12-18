@@ -1,19 +1,118 @@
-#navManual {
-	height:auto !important;
+/*#manualNav { display:none; }*/
+#manualNav { margin-bottom:40px; }
+#manualNav.scrolling {
+	position:fixed;
+	top:0;
+	width:100%;
+	z-index:1000;
+}
+#manualNav ul, #manualNav li, #manualNav span, #manualNav a {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#manualNav {
+	height: 40px;
+	background: #1a1a1a;
+	border-bottom: 2px solid #FC0;
+}
+#manualNav:after,
+#manualNav ul:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+#manualNav a {
+	color: #f0f0f0;
+	display: inline-block;
+	/*font-size: 0.9em;*/
+	line-height: 40px;
+	padding: 0 20px;
+	text-decoration: none;
+}
+#manualNav ul {
+  list-style: none;
+}
+#manualNav > ul {
+	color:#333;
+	float: left;
+}
+#manualNav > ul > li {
+	float: left;
+}
+#manualNav > ul > li.hasSub:hover:after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #FC0;
+	margin-left: -10px;
+}
+#manualNav > ul > li:first-child > a {
+}
+#manualNav > ul > li:last-child > a {
+}
+#manualNav > ul > li > a {
+	border-bottom: 2px solid #FC0;
+	height:40px;
+}
+#manualNav > ul > li:hover > a, #manualNav > ul > li.active > a {
+	background: #222;
+}
+#manualNav .hasSub {
+	z-index: 1;
+}
+#manualNav .hasSub:hover > ul {
+	display: block;
+}
+#manualNav .hasSub ul {
+	display: none;
+	position: absolute;
+	width: 200px;
+	top: 100%;
+	left: 0;
+}
+#manualNav .hasSub ul li {
+	margin-bottom: -1px;
+}
+#manualNav .hasSub ul li a {
+	background: #FC0;
+	border-bottom: 1px dotted #DA0;
+	color:#333;
+	filter: none;
+	font-size: 0.8em;
+	display: block;
+	line-height: 120%;
+	padding: 10px;
+}
+#manualNav .hasSub ul li:hover a, #manualNav .hasSub ul li.active a {
+	background: #DA0;
+	color:white;
+}
+#manualNav .hasSub .hasSub:hover > ul {
+	display: block;
+}
+#manualNav .hasSub .hasSub ul {
+	display: none;
+	position: absolute;
+	left: 100%;
+	top: 0;
+}
+#manualNav .hasSub .hasSub ul li a {
+	background: #FC0;
+	color:#333;
+	border-bottom: 1px dotted #DA0;
+}
+#manualNav .hasSub .hasSub ul li a:hover {
+	background: #15A3D9; /* TODO */
 }
 
-
-#navManual > ul {
-	margin-left:0.8em;
-}
-#navManual .icon-triangle { font-size:0.8em !important; }
-#navManual > ul > li li { display:none; }
-
-#navManual > ul > li { margin-left:1.1em; }
-
-
-
-#manual h1 { position:relative; }
+#manual h2 { position:relative; }
 #manualVersion {
 	font-family:DINPro, DIN Pro, DIN Next, Source Sans Pro, Open Sans, Segoe UI, Trebuchet MS, sans-serif;
 	font-size: 0.45em;
