@@ -31,6 +31,7 @@ a, a:before, a:after, button, button:before, div, fieldset, figure, h3, img, inp
 	vertical-align: middle;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
+	 -ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
 html {
@@ -48,9 +49,10 @@ body {
 	color: #F0F0F0;
 	font-size: 100%;
 	font-weight:100;
+	margin:0;
+	padding:5em 2em 0 21em;
 	width:100%;
 	max-width:75rem;
-	margin:0;
 }
 a:not(.imgLink) {
 	color: #FC0;
@@ -115,8 +117,6 @@ img {
 
 /* MAIN CONTENT */
 main {
-	margin:0;
-	padding:5em 2em 0 21em;
 	width:100%;
 	z-index:1;
 }
@@ -332,7 +332,7 @@ footer {
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 1250px) {
-	main {
+	#container {
 		padding:2.5em 2em 0 14em;
 	}
 
@@ -347,7 +347,7 @@ footer {
 }
 
 @media only screen and (max-width: 650px) {
-	main {
+	#container {
 		padding:1em 1em 0 3em;
 	}
 	footer {
