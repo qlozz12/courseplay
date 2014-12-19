@@ -4,8 +4,8 @@
 
 @font-face {
 	font-family: 'Museo Slab';
-    src: url('museo_slab_100-webfont.eot');
-    src: url('museo_slab_100-webfont.eot?#iefix') format('embedded-opentype'),
+	src: local('Museo Slab 100'), url('museo_slab_100-webfont.eot');
+    src: local('Museo Slab 100'), url('museo_slab_100-webfont.eot?#iefix') format('embedded-opentype'),
          url('museo_slab_100-webfont.woff2') format('woff2'),
          url('museo_slab_100-webfont.woff') format('woff'),
          url('museo_slab_100-webfont.ttf') format('truetype'),
@@ -20,8 +20,8 @@
 
 @font-face {
     font-family: 'Museo Slab';
-    src: url('museo_slab_500-webfont.eot');
-    src: url('museo_slab_500-webfont.eot?#iefix') format('embedded-opentype'),
+    src: local('Museo Slab 500'), url('museo_slab_500-webfont.eot');
+    src: local('Museo Slab 500'), url('museo_slab_500-webfont.eot?#iefix') format('embedded-opentype'),
          url('museo_slab_500-webfont.woff2') format('woff2'),
          url('museo_slab_500-webfont.woff') format('woff'),
          url('museo_slab_500-webfont.ttf') format('truetype'),

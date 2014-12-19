@@ -8,7 +8,7 @@ CP.el = {
 	faqContent: $('div.faqContent'),
 	faqTitles: $('.singleFaq').find('h2')
 };
-/* CP.el.faqContent.addClass('closed');
+CP.el.faqContent.addClass('closed');
 
 CP.el.faqTitles.on('click', function(evt) {
 	var t = $(this),
@@ -20,7 +20,7 @@ CP.el.faqTitles.on('click', function(evt) {
 		thisFaqContent.removeClass('closed').addClass('open');
 		scrollTo('#' + t.parents('.singleFaq').attr('id'));
 	};
-}); */
+});
 
 function scrollTo(targetId) {
 	$('html, body').animate({

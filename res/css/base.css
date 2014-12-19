@@ -103,7 +103,9 @@ img {
 #navSidebar > ul > li.active > a { cursor:default; }
 #navSidebar > ul > li.active > a span:last-of-type { 
 	cursor:default;
+	font-size:1.1em;
 	font-weight:500;
+	margin-left:1em;
 }
 
 #navSidebar span[class^="icon-"] {
@@ -142,14 +144,23 @@ h1, h2, h3, h4, h5 {
 }
 h1, h2 { 
 	font-family:Museo Slab, MuseoSlab, 'Adelle-SemiBold', serif;
-	font-size:2em;
 	font-weight:100;
 }
-h1 { line-height:1; }
-h2, #manual h3 { border-bottom:1px solid #b3b3b3; font-size:1.5em; margin:0 0 0.5em; }
-h3, h4, h5 {
+h4, h5 {
 	font-weight:500;
 }
+h3 {
+	border-left:5px solid #FC0;
+	border-right:5px solid #FC0;
+	font-size: 1.1em;
+	font-weight: 300;
+	background: rgba(0,0,0,0.5);
+	padding: 0.1em 1em;
+}
+
+
+h1 { line-height:1; font-size:3em; }
+h2 { border-bottom:1px solid #b3b3b3; font-size:1.5em; margin:0 0 0.5em; }
 /*
 h3 { border-bottom:1px solid #d6d6d6; font-size:1.4em;  margin:0 0 10px;}
 h4 { font-size:1.05em; }
@@ -281,7 +292,7 @@ ol ol li:last-child { margin-bottom:0; }
 .hudIcon.save		  { background-position:-220px -148px; }
 */
 .hudIcon.addCourse 	  { background-position: -20px -110px; }
-.hudIcon.arrowDown 	  { background-position: -66px  -92px; }
+.hudIcon.arrowDown 	  { background-position: -56px  -92px; }
 .hudIcon.arrowLeft 	  { background-position:  -2px  -92px; }
 .hudIcon.arrowRight   { background-position: -20px  -92px; }
 .hudIcon.arrowUp 	  { background-position: -38px  -92px; }
