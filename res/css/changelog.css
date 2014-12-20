@@ -6,8 +6,6 @@
 
 body.js .singleChangelog h3 {
 	cursor:pointer;
-	padding:2px 4px;
-	text-decoration:none;
 }
 body.js .singleChangelog h3:hover, body.js .singleChangelog h3:focus {
 	color: #FC0;
@@ -22,34 +20,65 @@ body.js .singleChangelog h3:active {
 .singleChangelog ul { margin-left:0; padding-left:0; }
 .singleChangelog ul li { list-style-position:outside; margin-left:1.25em; }
 
-.singleChangelog dl { padding-bottom:1em; vertical-align:top; } 
-.singleChangelog dt { cursor:default; display:inline-block; margin-top:10px; position:relative; top:5px; vertical-align:top; width:0; }
-.singleChangelog dt.new, .singleChangelog dt.fix, .singleChangelog dt.bug, .singleChangelog dt.change { 
-	border-radius:1px;
+.singleChangelog > ul > li {
+	border-top:1px solid rgba(0,0,0,0.25);
+	list-style:none;
+	margin-left:0;
+	padding:0.5em 0 0.5em 4em;
+	position:relative;
+}
+.singleChangelog > ul > li:first-of-type { border-top:none;}
+.singleChangelog > ul > li:before {
 	color:#F0F0F0;
-	font-size:12px;
-	height:20px;
-	line-height:14px;
-	margin-right:1%;
-	padding:3px 2px;
+	cursor:default; 
+	display:block;
+	font-size:0.8em;
+	font-weight:500;
+	left:0;
+	line-height:1.2em;
+	padding:0.33em 0.1em;
+	position:absolute;
 	text-align:center;
 	text-transform:uppercase;
-	width:9%;
+	top:0.7em;
+	width:4em;
 }
-.singleChangelog dt.new    { background-color:#2c9dc6; }
-.singleChangelog dt.fix    { background-color:#42c62c; }
-.singleChangelog dt.bug    { background-color:#b82b0a; }
-.singleChangelog dt.change { background-color:#FC0; color:#333; }
-.singleChangelog dd { border-top:1px dashed #ccc; display:inline-block;  padding:10px 0; width:88%; }
-.singleChangelog dd:first-of-type { border-top:none;}
 
-/* IMAGES *
-.singleChangelog ul li.new    { list-style-image:url(../img/changelogIcons_01.png); margin-left:44px; }
-.singleChangelog ul li.fix    { list-style-image:url(../img/changelogIcons_02.png); margin-left:44px; }
-.singleChangelog ul li.bug    { list-style-image:url(../img/changelogIcons_03.png); margin-left:44px; }
-.singleChangelog ul li.change { list-style-image:url(../img/changelogIcons_04.png); margin-left:44px; }
-/**/
+.singleChangelog li.change:before {
+	content:'change';
+	background-color:#FC0;
+	color:#333;
+}
+.singleChangelog li.fix:before {
+	content:'fix';
+	background-color:#42C62C;
+}
+.singleChangelog li.new:before {
+	content:'new';
+	background-color:#2C9dC6;
+}
+.singleChangelog li.bug:before {
+	content:'bug';
+	background-color:#B82B0A;
+}
 
-/*#changelog h3 { display:inline-block; }*/
-
-/* .singleChangelog.closed ul { display:none; } */
+@media only screen and (max-width: 950px) {
+	.singleChangelog > ul > li {
+		padding-left:2em;
+	}
+	.singleChangelog > ul > li:before {
+		width:1.5em;
+	}
+	.singleChangelog li.change:before {
+		content:'c';
+	}
+	.singleChangelog li.fix:before {
+		content:'f';
+	}
+	.singleChangelog li.new:before {
+		content:'n';
+	}
+	.singleChangelog li.bug:before {
+		content:'b';
+	}
+}
