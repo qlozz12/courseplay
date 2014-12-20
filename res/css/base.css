@@ -1,5 +1,6 @@
 @import url('../fonts/dinpro/style.css');
 @import url('../fonts/museoslab/style.css');
+@import url('../fonts/courseplay/style.css');
 
 
 /*** TRANSITIONS ***/
@@ -124,7 +125,8 @@ img {
 
 
 /* MAIN CONTENT */
-main {
+main, [role="main"] {
+	display:block; /* fix for IE */
 	width:100%;
 	max-width:41em;
 	z-index:1;
@@ -190,7 +192,7 @@ h5 { font-size:1.2em; font-style:italic; margin:0 0 10px; }
 	border:1px solid #0d0d0d;
 	border-radius:2px;
 	font-family:Consolas, Monaco, Cuisine, monospace;
-	font-size:0.9em;
+	font-size:0.8em;
 	padding:3px 6px;
 }
 .content pre {
@@ -256,83 +258,29 @@ ol > li:before {
 	width:2em;
 	/* Some space between the number and the content in browsers that support
 	   generated content but not positioning it (Camino 2 is one example) */
-	margin-right:8px;
-	padding:4px;
+	margin-right:0.5em;
+	padding:0;
 	border-top:2px solid #666;
 	color:#fff;
 	background:#666;
-	font-weight:bold;
-	font-family:'adelle_sbsemibold', 'Adelle-SemiBold', Helvetica, Myriad Pro, Segoe UI, sans-serif;
+	font-weight:500;
 	text-align:center;
 }
 li ol, li ul { margin-top:6px; }
 ol ol li:last-child { margin-bottom:0; }
 
 
-.hudIcon {
-	background:url(../img/manualIcons.png) 0 0 no-repeat scroll transparent;
-	background-size:128px 182px; /* half the size of the orig image, because element is 16px instead of 32px */
+span.inline[class^="icon-"] {
 	display:inline-block;
-	height:16px;
-	margin:0 3px;
-	position:relative;
-	top:1px;
-	width:16px;
+	font-size:0.9em;
+	margin:0 0.2em;
+	text-align:center;
 }
-.hudIcon[title] 	  { cursor:help; }
-.hudIcon.inline 	  { text-indent:-9999px; top:9px; }
-.content p:last-child .hudIcon.inline { top:0; }
-/*
-.hudIcon.addCourse	  { background-position: -40px -220px; }
-.hudIcon.arrowDown	  { background-position:-112px -184px; }
-.hudIcon.arrowLeft	  { background-position:  -4px -184px; }
-.hudIcon.arrowRight	  { background-position: -40px -184px; }
-.hudIcon.arrowUp	  { background-position: -76px -184px; }
-.hudIcon.closeHud	  { background-position:-148px -184px; }
-.hudIcon.copy		  { background-position:-184px -148px; }
-.hudIcon.deleteCourse { background-position:-184px -184px; }
-.hudIcon.minus		  { background-position:-184px -220px; }
-.hudIcon.openCourse	  { background-position:  -4px -220px; }
-.hudIcon.plus		  { background-position:-148px -220px; }
-.hudIcon.save		  { background-position:-220px -148px; }
-*/
-.hudIcon.addCourse 	  { background-position: -20px -110px; }
-.hudIcon.arrowDown 	  { background-position: -56px  -92px; }
-.hudIcon.arrowLeft 	  { background-position:  -2px  -92px; }
-.hudIcon.arrowRight   { background-position: -20px  -92px; }
-.hudIcon.arrowUp 	  { background-position: -38px  -92px; }
-.hudIcon.closeHud 	  { background-position: -74px  -92px; }
-.hudIcon.copy 		  { background-position: -92px  -74px; }
-.hudIcon.deleteCourse { background-position: -92px  -92px; }
-.hudIcon.minus 		  { background-position: -92px -110px; }
-.hudIcon.openCourse   { background-position:  -2px -110px; }
-.hudIcon.plus 		  { background-position: -74px -110px; }
-.hudIcon.save 		  { background-position:-110px  -74px; }
-/*.hudIcon.wiki 		  { background-position:0 -192px; }*/
-
-.toggle {
-	background: #f9f9f9;
-	border-radius: 3px;
-	border: 1px solid #d6d6d6;
-	color: #888;
-	cursor: pointer;
-	display: none; /* becomes inline-block via JS */
-	font-size: 9px;
-	margin:0 1em 0 0;
-	padding: 3px 5px;
-	position: relative;
-	text-align: center;
-	top:-5px;
-}
-.toggle:hover, .toggle:focus {
-	border:1px solid #19A7D0;
-	color:#20A8DB;
-/*	border:1px solid #c6c6c6;
-	color:#444; */
-}
-.toggle:active {
-	border:1px solid #19A7D0;
-	color:#20A8DB;
+span.inline[class^="icon-"][title] { cursor:help; }
+h4 span[class^="icon-"] {
+	font-size:0.9em;
+	margin:0 0.2em 0 0;
+	text-align:center;
 }
 
 

@@ -53,31 +53,31 @@
 						<li class='has-sub'>
 							<a href='#hud'><span>HUD</span></a>
 							<ul>
-								<li><a href="#hud_driverControls"><span>Driver controls</span></a></li>
-								<li><a href="#hud_saveCourse"><span>Save course</span></a></li>
-								<li><a href="#hud_manageCourses"><span>Manage courses</span></a></li>
-								<li><a href="#hud_mode2settings"><span>Combi mode settings</span></a></li>
-								<li><a href="#hud_manageCombine"><span>Manage combines</span></a></li>
-								<li><a href="#hud_speeds"><span>Speeds</span></a></li>
-								<li><a href="#hud_generalSettings"><span>General settings</span></a></li>
-								<li><a href="#hud_drivingSettings"><span>Drive and work settings</span></a></li>
-								<li><a href="#hud_courseGeneration"><span>Course generation</span></a></li>
-								<li><a href="#hud_shovelSettings"><span>Shovel positions</span></a></li>
-								<li class="last"><a href="#hud_combineSettings"><span>Combine controls</span></a></li>
+								<li><a href="#hud_driverControls"><span class="icon-page1"></span><span>Driver controls</span></a></li>
+								<li><a href="#hud_saveCourse"><span class="icon-page2"></span><span>Save course</span></a></li>
+								<li><a href="#hud_manageCourses"><span class="icon-page2"></span><span>Manage courses</span></a></li>
+								<li><a href="#hud_mode2settings"><span class="icon-page3"></span><span>Combi mode settings</span></a></li>
+								<li><a href="#hud_manageCombine"><span class="icon-page4"></span><span>Manage combines</span></a></li>
+								<li><a href="#hud_speeds"><span class="icon-page5"></span><span>Speeds</span></a></li>
+								<li><a href="#hud_generalSettings"><span class="icon-page6"></span><span>General settings</span></a></li>
+								<li><a href="#hud_drivingSettings"><span class="icon-page7"></span><span>Drive and work settings</span></a></li>
+								<li><a href="#hud_courseGeneration"><span class="icon-page8"></span><span>Course generation</span></a></li>
+								<li><a href="#hud_shovelSettings"><span class="icon-page9"></span><span>Shovel positions</span></a></li>
+								<li class="last"><a href="#hud_combineSettings"><span class="icon-page0"></span><span>Combine controls</span></a></li>
 							</ul>
 						</li>
 						<li class='has-sub'>
 							<a href="#driveModes"><span>Driving modes</span></a>
 							<ul>
-								<li><a href="#driveMode1"><span>Grain transport</span></a></li>
-								<li><a href="#driveMode2"><span>Combi</span></a></li>
-								<li><a href="#driveMode3"><span>Overloader</span></a></li>
-								<li><a href="#driveMode4"><span>Fertilizing and Seeding</span></a></li>
-								<li><a href="#driveMode5"><span>Transfer</span></a></li>
-								<li><a href="#driveMode6"><span>Field work</span></a></li>
-								<li><a href="#driveMode7"><span>Combine self unloading</span></a></li>
-								<li><a href="#driveMode8"><span>Liquid manure transporter</span></a></li>
-								<li class="last"><a href="#driveMode9"><span>Shovel filling and emptying</span></a></li>
+								<li><a href="#driveMode1"><span class="icon-mode1single"></span><span>Grain transport</span></a></li>
+								<li><a href="#driveMode2"><span class="icon-mode2single"></span><span>Combi</span></a></li>
+								<li><a href="#driveMode3"><span class="icon-mode3single"></span><span>Overloader</span></a></li>
+								<li><a href="#driveMode4"><span class="icon-mode4single"></span><span>Fertilizing and Seeding</span></a></li>
+								<li><a href="#driveMode5"><span class="icon-mode5single"></span><span>Transfer</span></a></li>
+								<li><a href="#driveMode6"><span class="icon-mode6single"></span><span>Field work</span></a></li>
+								<li><a href="#driveMode7"><span class="icon-mode7single"></span><span>Combine self unloading</span></a></li>
+								<li><a href="#driveMode8"><span class="icon-mode8single"></span><span>Liquid manure transporter</span></a></li>
+								<li class="last"><a href="#driveMode9"><span class="icon-mode9single"></span><span>Shovel filling and emptying</span></a></li>
 							</ul>
 						</li>
 						<li class="last">
@@ -107,7 +107,7 @@
 		</nav>
 	</div> <!-- END #navContainer -->
 
-	<!----------------------------------------------------------------------------------------------->
+	<!-- ------------------------------------------------------------------------------------------- -->
 
 	<main id="manual" role="main" class="content">
 		<h1>Manual <span id="manualVersion">valid for v3.41</span></h1>
@@ -115,31 +115,33 @@
 		<hr />
 
 		<article class="manualSection" id="intro">
-			<p>Lorem ipsum dolor sit amet, christe in lucem exitum atque bona delata iuvenis. Item ut casus turbata minim venisse nos capitur illam ad quia ei sed! Regis in modo ad te in modo ad quia illum in rei civibus. Adiuro me vero rex Dionysiadi rex Dionysiadi. Diana praesentatis ne a civitas ad nomine, notus ingreditur id quibus ut diem anulo quod ait.</p>
+			<p>This manual aims to describe the Courseplay hud, the changeable settings, and the different drive modes. Most likely, there will be one or the other thing missing.</p>
+			<p>If you find a topic not dealt with in this manual, please let us know.</p>
 		</article>
 
 		<!-- #################### -->
 
 		<article class="manualSection" id="controls">
 			<h2>Controls</h2>
-			<p>In general, controlling Courseplay works with the mouse, due to free keys in Farming Simulator are rather rare. By using the <span class="emphasize1">right mouse button</span> the Courseplay hud, where you can configure the drivers, is activated. In addition, a couple of functions like starting and stopping the driving are available for the keyboard, by using the keys <kbd title="Control">CTRL</kbd>+<kbd title="Keypad 7">KP 7</kbd> through <kbd title="Control">CTRL</kbd>+<kbd title="Keypad 9">KP 9</kbd>. In the hud you can switch the opening/closing the hud to using the keyboard (default: <kbd title="Control">CTRL</kbd>+<kbd title="Delete">DELETE</kbd>).</p>
+			<p>In general, controlling Courseplay works with the mouse, due to free keys in Farming Simulator being rather rare. By using the <span class="emphasize1">right mouse button</span> the Courseplay hud, where you can configure the drivers, is activated. In addition, a couple of functions like starting and stopping the driving are available for the keyboard, by using the keys <kbd title="Control">CTRL</kbd>+<kbd title="Keypad 7">KP 7</kbd> through <kbd title="Control">CTRL</kbd>+<kbd title="Keypad 9">KP 9</kbd>. In the hud you can switch the opening/closing the hud to using the keyboard (default: <kbd title="Control">CTRL</kbd>+<kbd title="Delete">DELETE</kbd>).</p>
+			<p>Both the keyboard and the mouse buttons can be configured in the game's options menu.</p>
 		</article>
 
 		<!-- #################### -->
 
 		<article class="manualSection" id="hud">
 			<h2>HUD</h2>
-			<p>When opening the hud, the mouse controls are activated automatically. Meaning, you can not use the mouse to look around anymore. In order to deactivate the mouse controls, you need to click the right mouse button again. Alternatively you can click on the <span class="hudIcon closeHud inline" title="close button">x</span> in the upper right corner of the hud. Doing so closes the hud and deactivates the mouse controls.</p>
-			<p>The hud is divided into multiple pages. You can navigate through those by either using the left/right arrows <span class="hudIcon arrowLeft inline" title="left arrow">&lsaquo;</span>/<span class="hudIcon arrowRight inline" title="right arrow">&rsaquo;</span> in the hud's upper section, or by directly clicking on the respective page icon at the very top. Keep in mind the certain pages are deactivated while you're in a certain mode.</p>
-			<p>In the center section on each page, a multitude of settings and options can be set and commands be given, simply by clicking on the chosen action or its corresponding buttons (<span class="hudIcon plus inline" title="plus">+</span>/<span class="hudIcon minus inline" title="minus">-</span>/<span class="hudIcon arrowLeft inline" title="left arrow">&lsaquo;</span>/<span class="hudIcon arrowRight inline" title="right arrow">&rsaquo;</span>) with the <span class="emphasize1">left mouse button</span>. Certain values and settings like scrolling through the course list, the settings of widths, speeds oder percentages etc. can be altered in bigger steps by pressing the <kbd title="Control">CTRL</kbd> key while clicking on the buttons.</p>
-			<p>In the bottom part of the hud you'll find information about the driver, the loaded course and the current status. Also in that section, you can save the current course by clicking <span class="hudIcon save inline" title="save course"></span>.</p>
+			<p>When opening the hud, the mouse controls are activated automatically. Meaning, you can not use the mouse to look around anymore. In order to deactivate the mouse controls, you need to click the right mouse button again. Alternatively you can click on the <span class="icon-close inline" title="close button"></span> in the upper right corner of the hud. Doing so closes the hud and deactivates the mouse controls.</p>
+			<p>The hud is divided into multiple pages. You can navigate through those by clicking on the respective page icon at the very top. The pages' titles are displayed as a tooltip. Keep in mind the certain pages are deactivated while you're in a certain mode.</p>
+			<p>In the center section on each page, a multitude of settings and options can be set and commands be given, simply by clicking on the chosen action or its corresponding buttons <span class="icon-plus inline" title="plus"></span>/<span class="icon-minus inline" title="minus"></span>/<span class="icon-arrowUp inline" title="arrow up"></span>/<span class="icon-arrowDown inline" title="arrow down"></span>/<span class="icon-arrowLeft inline" title="left arrow"></span>/<span class="icon-arrowRight inline" title="right arrow"></span> with the <span class="emphasize1">left mouse button</span>. Certain values and settings like scrolling through the course list, the settings of widths, speeds oder percentages etc. can be altered in bigger steps by pressing the <kbd title="Control">CTRL</kbd> key while clicking on the buttons. Some values and areas (like the course list) also accept the mouse wheel. This is indicated by a mouse wheel icon appearing next to the mouse cursor.</p>
+			<p>In the bottom part of the hud you'll find information about the driver, the loaded course and the current status.</p>
 		</article>
 
 		<!-- #################### -->
 
 		<article class="manualSection" id="hud_driverControls">
 			<h2>
-				<div class="pageButton page1"></div>
+				<span class="icon-page1"></span>
 				HUD: Driver controls
 			</h2>
 			<section class="manualSubSection">
@@ -221,17 +223,17 @@
 
 		<article class="manualSection" id="hud_saveCourse">
 			<h2>HUD: Saving the course</h2>
-			<p>In the bottom section of the hud there is a disc icon <span class="hudIcon save inline" title="save course"></span>. After recording a course, you can save it by clicking the disc. In the upper part of the screen a text input will be shown where you can name the course. Confirm with <kbd title="return">ENTER</kbd> (Return).</p>
+			<p>In the bottom section of the hud there is a disc icon <span class="icon-save inline" title="save course"></span>. After recording a course, you can save it by clicking the disc. In the upper part of the screen a text input will be shown where you can name the course. Confirm with <kbd title="return">ENTER</kbd> (Return).</p>
 		</article>
 
 		<!-- #################### -->
 
 		<article class="manualSection" id="hud_manageCourses">
 			<h2>
-				<div class="pageButton page2"></div>
+				<span class="icon-page2"></span>
 				HUD: Manage courses
 			</h2>
-			<p>On this page you'll find an overview containing your saved courses. The list can be scrolled through by using the up/down arrows <span class="hudIcon arrowUp inline" title="up arrow"></span>/<span class="hudIcon arrowDown inline" title="down arrow"></span> near the hud's right edge.</p>
+			<p>On this page you'll find an overview containing your saved courses. The list can be scrolled through by using the up/down arrows <span class="icon-arrowUp inline" title="up arrow"></span>/<span class="icon-arrowDown inline" title="down arrow"></span> near the hud's right edge.</p>
 
 			<dl class="buttonInfo">
 				<dt>Default change</dt>
@@ -245,7 +247,7 @@
 			<p>Each course has three options, respectively:
 				<ul>
 					<li>
-						<h4><span class="hudIcon openCourse" title="Load/combine course"></span> Load/Combine</h4>
+						<h4><span class="icon-loadMergeCourse" title="Load/merge course"></span> Load/merge</h4>
 						<p>Loading the course. If there already is a course loaded, the clicked course will be combined with the already loaded one at the first common <a href="#hud_driverControls" class="internalTab">crossing point</a>. In both courses, two crossing points (one in each course) that are closer to each other than 50 metres are determined. The combined course will lead up until the first course's crossing point, and from there go the second course from its respective crossing point.</p>
 						<figure>
 							<img src="../../res/img/crossingPoints_en.png" alt="Crossing points diagram" class="infoImg">
@@ -253,11 +255,11 @@
 						</figure>
 					</li>
 					<li>
-						<h4><span class="hudIcon addCourse" title="Add course"></span> Add</h4>
+						<h4><span class="icon-courseAppend" title="Append course"></span> Append</h4>
 						<p>If there already is a course loaded, the clicked course will be added at the end of the already loaded course.</p>
 					</li>
 					<li>
-						<h4><span class="hudIcon deleteCourse" title="Delete course"></span> Delete</h4>
+						<h4><span class="icon-delete" title="Delete course/folder"></span> Delete</h4>
 						<p>The course will be deleted completely from Courseplay and the save game. It will not be available anymore, not even when loading the game again.</p>
 					</li>
 				</ul>
@@ -269,15 +271,15 @@
 
 		<article class="manualSection" id="hud_mode2settings">
 			<h2>
-				<div class="pageButton page3"></div>
+				<span class="icon-page3"></span>
 				HUD: Combi mode settings
 			</h2>
 			<p class="emphasize2">This page is displayed in all modes except "Transfer", "Field work" and "Fill and empty shovel".</p>
-			<p>Just like the name implies, these settings are for the combi and overload modes. You can configure your driver to be better suited to unload the combine. The values can be changed by clicking the <span class="hudIcon plus inline" title="plus">+</span>/<span class="hudIcon minus inline" title="minus">-</span> buttons on the right hand side (bigger steps with pressed <kbd title="Control">CTRL</kbd> key).</p>
+			<p>Just like the name implies, these settings are for the combi and overload modes. You can configure your driver to be better suited to unload the combine. The values can be changed by clicking the <span class="icon-plus inline" title="plus"></span>/<span class="icon-minus inline" title="minus"></span> buttons on the right hand side (bigger steps with pressed <kbd title="Control">CTRL</kbd> key).</p>
 			<ul>
 				<li>
 					<h4>Side offset</h4>
-					<p>This value defines the horizontal offset between the driver and the combine/chopper when unloading. Technically, it's the distance between the combine's center and its pipe end. By default it's set to "auto" - the driver calculates the side distance automatically. The value can be changed and set to "manual" by clicking <span class="hudIcon plus inline" title="plus">+</span>/<span class="hudIcon minus inline" title="minus">-</span>. You can reset it to "automatic" by setting it to 0 (zero).</p>
+					<p>This value defines the horizontal offset between the driver and the combine/chopper when unloading. Technically, it's the distance between the combine's center and its pipe end. By default it's set to "auto" - the driver calculates the side distance automatically. The value can be changed and set to "manual" by clicking <span class="icon-plus inline" title="plus"></span>/<span class="icon-minus inline" title="minus"></span>. You can reset it to "automatic" by setting it to 0 (zero).</p>
 					<dl class="buttonInfo">
 						<dt>Default change</dt>
 						<dd>0.1 m</dd>
@@ -289,7 +291,7 @@
 				</li>
 				<li>
 					<h4>Pipe offset</h4>
-					<p>This value defines the vertical offset between the driver's trailer and the combine/chopper when unloading (ahead/behind). This is being used to have the trailer directly underneath the pipe. By default it's set to "auto". In contrast to the side offset or the turning circle, clicking <span class="hudIcon plus inline" title="plus">+</span>/<span class="hudIcon minus inline" title="minus">-</span> adds to/subtracts from the automatic value. Meaning: e.g. "1 m ahead", "2.5 m back", &hellip;. You can reset it to "automatic" by setting it to 0 (zero).</p>
+					<p>This value defines the vertical offset between the driver's trailer and the combine/chopper when unloading (ahead/behind). This is being used to have the trailer directly underneath the pipe. By default it's set to "auto". In contrast to the side offset or the turning circle, clicking <span class="icon-plus inline" title="plus"></span>/<span class="icon-minus inline" title="minus"></span> adds to/subtracts from the automatic value. Meaning: e.g. "1 m ahead", "2.5 m back", &hellip;. You can reset it to "automatic" by setting it to 0 (zero).</p>
 					<dl class="buttonInfo">
 						<dt>Default change</dt>
 						<dd>0.1 m</dd>
@@ -301,7 +303,7 @@
 				</li>
 				<li>
 					<h4>Turning circle</h4>
-					<p>This value defines the driving tractor's turning circle, which is especially used for turning maneuvers when unloading a combine or chopper. The value, like the side offset, is calculated automatically (based on wheel angle, wheel base, track width, number of trailers), as soon as a driver is hired. It can be changed and set to "manual" by clicking <span class="hudIcon plus inline" title="plus">+</span>/<span class="hudIcon minus inline" title="minus">-</span>. You can reset it to "automatic" by setting it to 0 (zero).</p>
+					<p>This value defines the driving tractor's turning circle, which is especially used for turning maneuvers when unloading a combine or chopper. The value, like the side offset, is calculated automatically (based on wheel angle, wheel base, track width, number of trailers), as soon as a driver is hired. It can be changed and set to "manual" by clicking <span class="icon-plus inline" title="plus"></span>/<span class="icon-minus inline" title="minus"></span>. You can reset it to "automatic" by setting it to 0 (zero).</p>
 					<dl class="buttonInfo">
 						<dt>Default change</dt>
 						<dd>1 m</dd>
@@ -343,7 +345,7 @@
 
 		<article class="manualSection" id="hud_manageCombine">
 			<h2>
-				<div class="pageButton page4"></div>
+				<span class="icon-page4"></span>
 				HUD: Manage combines
 			</h2>
 			<p class="emphasize2">This page is displayed only in the "combine" and "overloader" modes.</p>
@@ -353,7 +355,7 @@
 
 		<article class="manualSection" id="hud_speeds">
 			<h2>
-				<div class="pageButton page5"></div>
+				<span class="icon-page5"></span>
 				HUD: Speeds
 			</h2>
 			<p>Here you can set how fast your driver should drive. Also, you can choose if a course should be driven with the speed used during the recording, or the maximum speed.</p>
@@ -373,7 +375,7 @@
 
 		<article class="manualSection" id="hud_generalSettings">
 			<h2>
-				<div class="pageButton page6"></div>
+				<span class="icon-page6"></span>
 				HUD: General settings
 			</h2>
 			<ul>
@@ -403,7 +405,7 @@
 
 		<article class="manualSection" id="hud_drivingSettings">
 			<h2>
-				<div class="pageButton page7"></div>
+				<span class="icon-page7"></span>
 				HUD: Drive and work settings
 			</h2>
 			<ul>
@@ -447,14 +449,14 @@
 				<li>
 					<h4>Copy course</h4>
 					<p>Lets you copy the exact course and waypoints from another vehicle. Also works with combined, generated or unsaved courses.</p>
-					<p>First choose the vehicle whose course you want to copy, then press the <span class="hudIcon copy inline" title="copy button">[copy]</span> button. The current course and waypoints will be overwritten completely.</p>
+					<p>First choose the vehicle whose course you want to copy, then press the <span class="icon-copy inline" title="copy button"></span> button. The current course and waypoints will be overwritten completely.</p>
 				</li>
 			</ul>
 		</article>
 
 		<article class="manualSection" id="hud_courseGeneration">
 			<h2>
-				<div class="pageButton page8"></div>
+				<span class="icon-page8"></span>
 				HUD: Course generation
 			</h2>
 			<p class="emphasize2">This page is only displayed in the "Fertilizer and seeding" and "Field work" modes.</p>
@@ -486,7 +488,7 @@
 				</li>
 				<li>
 					<h4>Headland</h4>
-					<p>Set wether the course should have a lane of headland (turn row) (<a href="http://en.wikipedia.org/wiki/Headland_(agriculture)" title="Read more about headland at Wikipedia" class="iconLink"><span class="hudIcon wiki inline">Wikipedia</span></a>), and wether it should be before (e.g. with a combine) or after (e.g. with a seeder).</p>
+					<p>Set wether the course should have a lane of headland (turn row) (<a href="http://en.wikipedia.org/wiki/Headland_(agriculture)" title="Read more about headland at Wikipedia"><span class="icon-wiki inline"></span> Wikipedia</a>), and wether it should be before (e.g. with a combine) or after (e.g. with a seeder).</p>
 				</li>
 				<li>
 					<h4>Generate course</h4>
@@ -504,7 +506,7 @@
 
 		<article class="manualSection" id="hud_shovelSettings">
 			<h2>
-				<div class="pageButton page9"></div>
+				<span class="icon-page9"></span>
 				HUD: Shovel positions
 			</h2>
 			<p class="emphasize2">This page is only displayed in <a href="#driveMode9" class="internalTab">Fill and empty shovel</a> mode.</p>
@@ -555,7 +557,7 @@
 
 		<article class="manualSection" id="hud_combineSettings">
 			<h2>
-				<div class="pageButton page0"></div>
+				<span class="icon-page0"></span>
 				HUD: Combine controls
 			</h2>
 			<p class="emphasize2">This page is only accessable from combines, choppers and tractors with attached combines or choppers.</p>
@@ -591,21 +593,21 @@
 			<h2>Driving modes</h2>
 			<p>There are nine different driving modes:</p>
 			<ol>
-				<li><div class="modeButton mode1"></div> <a href="#driveMode1"><span>Grain transport</span></a></li>
-				<li><div class="modeButton mode2"></div> <a href="#driveMode2"><span>Combi</span></a></li>
-				<li><div class="modeButton mode3"></div> <a href="#driveMode3"><span>Overloader</span></a></li>
-				<li><div class="modeButton mode4"></div> <a href="#driveMode4"><span>Fertilizing and Seeding</span></a></li>
-				<li><div class="modeButton mode5"></div> <a href="#driveMode5"><span>Transfer</span></a></li>
-				<li><div class="modeButton mode6"></div> <a href="#driveMode6"><span>Field work</span></a></li>
-				<li><div class="modeButton mode7"></div> <a href="#driveMode7"><span>Combine self unloading</span></a></li>
-				<li><div class="modeButton mode8"></div> <a href="#driveMode8"><span>Liquid manure transporter</span></a></li>
-				<li><div class="modeButton mode9"></div> <a href="#driveMode9"><span>Fill and empty shovel</span></a></li>
+				<li><span class="icon-mode1block"></span> <a href="#driveMode1"><span>Grain transport</span></a></li>
+				<li><span class="icon-mode2block"></span> <a href="#driveMode2"><span>Combi</span></a></li>
+				<li><span class="icon-mode3block"></span> <a href="#driveMode3"><span>Overloader</span></a></li>
+				<li><span class="icon-mode4block"></span> <a href="#driveMode4"><span>Fertilizing and Seeding</span></a></li>
+				<li><span class="icon-mode5block"></span> <a href="#driveMode5"><span>Transfer</span></a></li>
+				<li><span class="icon-mode6block"></span> <a href="#driveMode6"><span>Field work</span></a></li>
+				<li><span class="icon-mode7block"></span> <a href="#driveMode7"><span>Combine self unloading</span></a></li>
+				<li><span class="icon-mode8block"></span> <a href="#driveMode8"><span>Liquid manure transporter</span></a></li>
+				<li><span class="icon-mode9block"></span> <a href="#driveMode9"><span>Fill and empty shovel</span></a></li>
 			</ol>
 		</article>
 
 		<!-- ### DRIVEMODE1 ### -->
 		<article class="manualSection" id="driveMode1">
-			<h2><div class="modeButton mode1"></div> Grain transport</h2>
+			<h2><span class="icon-mode1single"></span> Grain transport</h2>
 			<p>The tractor waits at the first waypoint until his trailer has been filled. This can happen at a silo, at a field edge or anywhere else. As soon as the fill level reaches the set percentage (<code>Drive on at %</code>), the driver starts to drive the course. As soon as he reaches an unloading trigger, he unloads automatically. Afterwards he continues the course to return to the first waypoint.</p>
 			<p>The last waypoint should be 5 to 10 m ahead of the first, and have somewhat the same direction as the first.</p>
 			<figure>
@@ -616,7 +618,7 @@
 
 		<!-- ### DRIVEMODE2 ### -->
 		<article class="manualSection" id="driveMode2">
-			<h2><div class="modeButton mode2"></div> Combi</h2>
+			<h2><span class="icon-mode2single"></span> Combi</h2>
 			<p>The combi mode is very similar to the <a href="#driveMode1" class="internalTab">Driving helper</a> mode, in that the tractor drives a course and unloads at a trigger. But, in addition, the driver unloads a working combine or chopper on the field.</p>
 			<p>The tractor waits at the last waypoint until it has a combine/chopper in reach, and said combine's fill level is above the percentage (<code>Start&nbsp;at&nbsp;%</code>) set for the tractor. Then, the driver drives to the combine, comes from behind, and drives underneath the pipe, where the combine starts to unload into the tractor's trailer. If the trailer isn't full yet (<code>Drive&nbsp;on&nbsp;at&nbsp;%</code>), the tractor turns around and waits in the field for his next unloading operation. As soon as the trailer's fill level is above the <code>Drive&nbsp;on&nbsp;at&nbsp;%</code> percentage, the driver will drive to the course's second waypoint, and from there continue the course, unloading the trailer and returning to the field.</p>
 			<p>The tractor has two possibilities to have a combine in reach:
@@ -633,7 +635,7 @@
 
 		<!-- ### DRIVEMODE3 ### -->
 		<article class="manualSection" id="driveMode3">
-			<h2><div class="modeButton mode3"></div> Overloader</h2>
+			<h2><span class="icon-mode3single"></span> Overloader</h2>
 			<p>The overloading mode is somewhat similar to the combi mode, in that the driver unloads a combine. But instead of the driving a course to an unloading trigger, the driver overloads into a waiting trailer. As with the combi mode, a combine can be found automatically or set manually.</p>
 			<p>The course's start point should be in proximity to a waiting trailer (e.g. another tractor in "driver helper" mode). From there, the course must lead to the trailer. When the overloader's pipe is above the waiting trailer (so when it's able to overload), a <span class="emphasize1">waiting point</span> needs to be set. Later, while driving the course, this waiting point tells the overloader to stop, extend the pipe, and start overloading. During, an info message <code>XYZ has reached overload point.</code> will be displayed. When the overloader is empty, the driver will continue the course and wait at the last waypoint for his next unloading operation.</p>
 			<p>After the waiting point, the course needs to extend a little further (away from the trailer), ideally back to the start point.</p>
@@ -645,7 +647,7 @@
 
 		<!-- ### DRIVEMODE4 ### -->
 		<article class="manualSection" id="driveMode4">
-			<h2><div class="modeButton mode4"></div> Fertilize and seeding</h2>
+			<h2><span class="icon-mode4single"></span> Fertilize and seeding</h2>
 			<p>When fertilizing or seeding, there are two sections: one, the actual work part on the field, and two, the course from the field to the refilling trigger and back to the field.</p>
 			<p>The field work course can be created in two different ways:</p>
 			<ol>
@@ -667,13 +669,13 @@
 
 		<!-- ### DRIVEMODE5 ### -->
 		<article class="manualSection" id="driveMode5">
-			<h2><div class="modeButton mode5"></div> Transfer</h2>
+			<h2><span class="icon-mode5single"></span> Transfer</h2>
 			<p>The transfer mode is the most simple form to get from A to B. It uses a completely regular course with a start and an end point. The driver blindly follows that course, without unloading or other fancy stuff. Reaching the end, the driver returns to the start point and repeats the course. If you want to prevent that, you need to activate the <code>Stop at last point or at next trigger</code> option.</p>
 		</article>
 
 		<!-- ### DRIVEMODE6 ### -->
 		<article class="manualSection" id="driveMode6">
-			<h2><div class="modeButton mode6"></div> Field work</h2>
+			<h2><span class="icon-mode6single"></span> Field work</h2>
 			<p>The field work mode is the work horse of all the different modes: it can be used for pressing bales, collecting bales, windrowing, teddering, cultivating and much more.</p>
 			<p>Basically, it works much the same as the fertilizing/seeding mode, only that the tool needs to be emptied/unloaded instead of being refilled. Also, the work area must be defined between two waiting points; the unloading course needs to go through a corresponding trigger.</p>
 			<p>As in the fertilizing/seeding mode, the field work course can be generated in two ways:</p>
@@ -694,7 +696,7 @@
 
 		<!-- ### DRIVEMODE7 ### -->
 		<article class="manualSection" id="driveMode7">
-			<h2><div class="modeButton mode7"></div> Combine self unloading</h2>
+			<h2><span class="icon-mode7single"></span> Combine self unloading</h2>
 			<p>This mode works similarly to the overloading mode. The course must have a waiting point at the overloading position, where the combine will stop, extend the pipe, and unload.</p>
 			<figure>
 				<img src="../../res/img/manual_mode7_en.png" alt="Overloading diagram" class="infoImg">
@@ -705,7 +707,7 @@
 
 		<!-- ### DRIVEMODE8 ### -->
 		<article class="manualSection" id="driveMode8">
-			<h2><div class="modeButton mode8"></div> Liquid manure transporter</h2>
+			<h2><span class="icon-mode8single"></span> Liquid manure transporter</h2>
 			<p>The liquid manure transporting mode is for field containers and similar tools that have an integrated liquid manure filling trigger. The tool is refilled at a liquid manure silo and then driven to a field's edge, where a working liquid manure barrel can refill automatically.</p>
 			<p>It basically doesn't matter where the course begins or ends, only make sure of two things:</p>
 			<ol>
@@ -721,7 +723,7 @@
 
 		<!-- ### DRIVEMODE9 ### -->
 		<article class="manualSection" id="driveMode9">
-			<h2><div class="modeButton mode9"></div> Fill and empty shovel</h2>
+			<h2><span class="icon-mode9single"></span> Fill and empty shovel</h2>
 			<p>This mode lets you fill a shovel in a designated area (e.g. a BGA silo) and unload it into a bunker or trailer.</p>
 			<p>The course setup <span class="emphasize1 emphasize2">has to be</span> as follows:</p>
 			<figure>
@@ -820,6 +822,7 @@
 		</article>
 	</main>
 
+	<!-- ------------------------------------------------------------------------------------------- -->
 
 	<footer>
 		<div>&copy; Courseplay Dev Team, 2014</div>
@@ -834,6 +837,7 @@
 </div> <!-- #container -->
 
 <!-- Scripts -->
+<!-- <script src="../../res/js/modernizr.js"></script> -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="../../res/js/manual.js"></script>
 </body>

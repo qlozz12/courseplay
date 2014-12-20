@@ -74,17 +74,16 @@
 			<hr />
 
 			<h3>Changes in the current developer version (v4.00.dev)</h3>
-			<ul class="changelogContent">
-				<!-- FIX -->
-				<li class="fix">improved detection of attached combines</li>
+			<!-- FIX -->
+			<ul class="changelogContent fix">
+				<li>improved detection of attached combines</li>
 
-				<!-- mod specific -->
-				<li class="fix">improved unloading of Grimme SE 75</li>
+				<li>Self-unloading combine: in order to not drive through the fruit, the combine will reverse a bit before driving to unloading spot</li>
+			</ul>
 
-				<li class="fix">Self-unloading combine: in order to not drive through the fruit, the combine will reverse a bit before driving to unloading spot</li>
-
-				<!-- CHANGE -->
-				<li class="change">
+			<!-- CHANGE -->
+			<ul class="changelogContent change">
+				<li>
 					<!-- TODO: Add to german page -->
 					<h4>Forward unloading in silage silos</h4>
 					<ul>
@@ -93,15 +92,15 @@
 					</ul>
 				</li>
 
-				<li class="change">Notification if tool needs to be refilled/unloaded in fertilizer/field work modes</li>
+				<li>Notification if tool needs to be refilled/unloaded in fertilizer/field work modes</li>
 
-				<li class="change">Debug levels have been changed to debug channels for vastly improved specific debug possibilities</li>
+				<li>Debug levels have been changed to debug channels for vastly improved specific debug possibilities</li>
 
-				<li class="change">Offset inputs are only shown in overloader, fertilizer/seeding, field work and combine self-unloading modes</li>
+				<li>Offset inputs are only shown in overloader, fertilizer/seeding, field work and combine self-unloading modes</li>
 
-				<li class="change">Speed units are now displayed correctly for every single language</li>
+				<li>Speed units are now displayed correctly for every single language</li>
 
-				<li class="change">
+				<li>
 					<h4>New inputBinding system</h4>
 					<ul>
 						<li>mouse buttons can now be changed in the game's option menu</li>
@@ -109,7 +108,7 @@
 					</ul>
 				</li>
 
-				<li class="change">
+				<li>
 					<h4>New auger wagon system</h4>
 					<ul>
 						<li>auger wagons no longer use their own specialization, but now are handled as special tools</li>
@@ -118,7 +117,7 @@
 					</ul>
 				</li>
 
-				<li class="change">
+				<li>
 					<h4>Offsets</h4>
 					<ul>
 						<li>lane and tool offsets are now separated, allowing for better control</li>
@@ -126,9 +125,38 @@
 						<li>self-unloading combine: offset can now be used with the offloading course, allowing different combines to use the same course</li>
 					</ul>
 				</li>
+			</ul>
 
-				<!-- NEW -->
-				<li class="new">
+			<!-- NEW -->
+			<ul class="changelogContent new">
+				<li>
+					<h4>Automatic and manual field scanner</h4>
+					<ul>
+						<li>Courseplay can scan the map's fields to generate an border path (field edge path). No need to drive around the field anymore.</li>
+						<li>In an existing savegame, this option is activated by default. When starting a new savegame, there will be a dialog asking you to activate/deactivate it. The setting can be activated/deactivated in the <code>courseplay.xml</code> file.</li>
+						<li>In addition, single fields can be scanned manually (when the vehicle is on the field) and saved. These fields are saved in the <code>courseplayFields.xml</code> file.</li>
+						<li>Thanks to upsidedown for the initiation and help</li>
+					</ul>
+				</li>
+
+				<li>
+					<h4>Driver wages</h4>
+					<ul>
+						<li>Drives are now paid wages:
+							<ul>
+								<li>easy: € 500 / hour</li>
+								<li>medium: € 1,000 / hour</li>
+								<li>difficult: € 1,500 / hour</li>
+							</ul>
+						</li>
+						<li>If you use a different currency system than Euros, the wages are adjusted accordingly.</li>
+						<li>In an existing savegame, this option is activated by default. When starting a new savegame, there will be a dialog asking you to activate/deactivate it. The setting can be activated/deactivated in the <code>courseplay.xml</code> file.</li>
+					</ul>
+				</li>
+				
+				<li>Active drivers are displayed on the ingame map. This can be toggled in the <code>courseplay.xml</code> file.</li>
+
+				<li>
 					<!-- TODO: Add to german page -->
 					<h4>Reverse unloading in silage silos</h4>
 					<ul>
@@ -139,30 +167,24 @@
 					</ul>
 				</li>
 
-				<li class="new">Auto ridgemarkers settings are now saved in/loaded from the vehicles.xml</li>
+				<li>Auto ridgemarkers settings are now saved in/loaded from the <code>vehicles.xml</code> file.</li>
 
-				<li class="new">Shovel positions are now saved in/loaded from the vehicles.xml</li>
+				<li>Shovel positions are now saved in/loaded from the <code>vehicles.xml</code> file.</li>
 
-				<li class="new">the Courseplay version is now displayed in the hud, allowing everyone to easily report it when needed</li>
+				<li>the Courseplay version is now displayed in the hud, allowing everyone to easily report it when needed</li>
 
-				<li class="new">
-					<h4>Customizable settings</h4>
-					<ul>
-						<li>the hud position can now be easily set by the user in the courseplay.xml<br />(<code>&lt;courseplayHud posX="0.433" posY="0.002" /&gt;</code>)</li>
-					</ul>
+				<li>
+					<h4>Customizable hud position</h4>
+					The hud position can now be easily set by the user in the <code>vehicles.xml</code> file.<br />(<code>&lt;courseplayHud posX="0.433" posY="0.002" /&gt;</code>)
 				</li>
 
-				<li class="new">
+				<li>
 					<h4>Mouse wheel usage</h4>
 					Any number and list values can now be set by using the mouse wheel (when hovering over the value or list). <br />
 					<span class="emphasize2">Note: while the mouse cursor is active, the vehicle's zoom function is disabled.</span>
 				</li>
 
-				<!--
-				<li class="new">[TODO] course generation with CourseplayFields</li>
-				-->
-
-				<li class="new">
+				<li>
 					<!-- TODO: Update on german page -->
 					<h4>Driving backwards with trailers</h4>
 					<ul>
@@ -185,19 +207,20 @@
 					</ul>
 				</li>
 
-				<li class="new">When approaching refill triggers (e.g. seed, fuel, liquid manure, &hellip;), the vehicle now slows down to avoid hard braked stops</li>
+				<li>When approaching refill triggers (e.g. seed, fuel, liquid manure, &hellip;), the vehicle now slows down to avoid hard braked stops</li>
 
-				<li class="new">
+				<li>
 					<h4>Completely new course management system</h4>
 					<ul>
 						<li>Folders, baby! Courses (and folders) can now be moved into folders for better overview</li>
 						<li>Searchable courses and folders: use a filter to quickly find the course you want</li>
 						<li>Faster XML saving and loading</li>
 						<li>Much improved sorting of courses</li>
+						<li>Thanks to horoman writing and implementing it</li>
 					</ul>
 				</li>
 
-				<li class="new">
+				<li>
 					<h4>New course save/filter form GUI</h4>
 					<ul>
 						<li>New interface for better visibility and usability&hellip; and beauty</li>
@@ -206,7 +229,7 @@
 					</ul>
 				</li>
 
-				<li class="new">
+				<li>
 					<h4>Completely new waypoint sign system</h4>
 					<ul>
 						<li>vastly improved performance: unused signs are moved into a cache</li>
@@ -215,12 +238,12 @@
 					</ul>
 				</li>
 
-				<li class="new">
+				<li>
 					<h4>Unloading on field</h4>
 					Baleloaders can now automatically unload on the field if no unloading course has been appended.
 				</li>
 
-				<li class="new">
+				<li>
 					<h4>Traffic collision raycast</h4>
 					<ul>
 						<li>Earlier recognition of traffic ahead, meaning early enough braking</li>
@@ -229,23 +252,23 @@
 					</ul>
 				</li>
 
-				<li class="new">
+				<li>
 					<h4>Optional symmetric lane change</h4>
 					<span class="emphasize1">Please see the <a href="../faq/index.html">FAQ</a></span> for further information <span class="emphasize2">(&ldquo;How to use the offset? — a.k.a. how do I let multiple vehicles drive a fieldwork course?&rdquo;)</span>.
 				</li>
 
-				<li class="new">
+				<li>
 					<h4>Optional switch in the combine for offloading driver priority</h4>
 					Choose between fill level (the fullest one will be called) and distance (the closest one will be called)
 				</li>
 
-				<li class="new">
+				<li>
 					<h4>Jump buttons for global info text notifications</h4>
 					Jump directly into the corresponding vehicle from your current tractor, or when being on foot by using the mouse cursor
 				</li>
 
 				<!-- mod specific -->
-				<li class="new">
+				<li>
 					<h4>Added support for the following mods</h4>
 					<ul>
 						<li>AutoCombine <span class="emphasize2">(biedens)</span></li>

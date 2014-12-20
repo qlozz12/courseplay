@@ -18,13 +18,13 @@ CP.el.faqTitles.on('click', function(evt) {
 	CP.el.faqContent.removeClass('open').addClass('closed');
 	if (!isOpen) {
 		thisFaqContent.removeClass('closed').addClass('open');
-		scrollTo('#' + t.parents('.singleFaq').attr('id'));
+		scrollTo(t.parents('.singleFaq'));
 	};
 });
 
-function scrollTo(targetId) {
+function scrollTo(el) {
 	$('html, body').animate({
-		scrollTop: $(targetId).offset().top
+		scrollTop: el.offset().top
 	}, CP.animationTime);
 } //END scrollTo()
 
@@ -57,10 +57,13 @@ var sepLine = new Kinetic.Rect({
 layer.add(sepLine);
 
 var canvasFont = 'DINPro, Calibri, Open Sans, Source Sans Pro, sans-serif';
+var regularLaneChangeText = $('#regularText').text();
+var symmetricLaneChangeText = $('#symmetricText').text();
+
 var regularLaneChangeText = new Kinetic.Text({
 	x: stage.getWidth() * 0.25,
 	y: 15,
-	text: 'Regular lane change',
+	text: regularLaneChangeText,
 	fontSize: 18,
 	fontFamily: canvasFont,
 	fill: 'rgb(240,240,240)',
@@ -72,7 +75,7 @@ regularLaneChangeText.setOffset({
 var symmetricLaneChangeText = new Kinetic.Text({
 	x: stage.getWidth() * 0.75,
 	y: 15,
-	text: 'Symmetric lane change',
+	text: symmetricLaneChangeText,
 	fontSize: 18,
 	fontFamily: canvasFont,
 	fill: 'rgb(240,240,240)',

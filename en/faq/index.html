@@ -90,11 +90,9 @@
 					<li>The work tool you're using isn't symmetrical, so you need to drive slightly off course (left or right) to have the tool in the path's center. This applies to, e.g., a bale loader, or a side mower. In this case, use the tool offset setting.</li>
 					<li>You want to use a group of vehicles to drive side by side, in order to work the field faster. In this case, use the lane offset setting.</li>
 				</ol>
-				<br />
 
 				<h3>The asymmetrical tool (tool offset)</h3>
 				<p>On the X axis, calculate (or at least estimate) the distance between the point where the tool should "hit" the path and the vehicle's center. Use that distance as the horizontal offset. For example, the default bale loader (Arcusin) needs an offset of approximately <span class="serif">1.5</span> to <span class="serif">2</span> metres to the <span class="emphasize2">left</span> (as the grabber is on the <span class="emphasize2">right</span> side of the tool).</p>
-				<br />
 
 
 				<h3>The groupies (lane offset)</h3>
@@ -109,35 +107,40 @@
 
 				<p>Staying with the seeder example, vehicle #1 will drive on the <span class="emphasize2">left</span> side of the course with an offset of <span class="emphasize1">-3 metres</span>, vehicle #2 will drive on the <span class="emphasize2">right</span> side of the course with an offset of <span class="emphasize1">3 metres</span>.</p>
 
+				<h3>Regular vs. symmetric lane change</h3>
 				<p>There are two methods for setting up the lane usage: <span class="emphasize1">regular lane change</span> and <span class="emphasize1">symmetrical lane change</span>.</p>
 				<ul>
 					<li><span class="emphasize1">Regular lane change</span>: while in the first lane they will drive side by side, remember that their position, relative to the path, will <span class="emphasize2">always</span> be left/right of the course. So in the next lane, they will appear to switch the positions, but in reality they will still be left/right of the path.</li>
 					<li><span class="emphasize1">Symmetrical lane change</span>: the vehicles will effectively leave a free lane for the following vehicle.</li>
 				</ul>
 
+				<!--
 				<figure>
 					<img src="../../res/img/faq_symmetricalLaneChange_en.png" alt="Regular vs. symmetrical lane change" class="infoImg">
-					<figcaption>Fig. 1: Regular vs. symmetrical lane change</figcaption>
+					<figcaption>Regular vs. symmetrical lane change</figcaption>
 				</figure>
+				-->
 				<noscript>Please enable Javascript to proceed.</noscript>
 				<button id="playLaneOffsets" class="button">Play</button>
+				<span id="regularText" class="hidden">Regular lane change</span>
+				<span id="symmetricText" class="hidden">Symmetric lane change</span>
 				<div id="laneChangeStage"></div>
 
-
+				<h3>The lane offset calculation</h3>
 				<p>The formula for calculating the offset is:</p>
-				<figure>
-					<img src="../../res/img/faq_offset_en.png" alt="Calculating the tool's offset" class="infoImg">
-					<figcaption>Fig. 2: Calculating the lane offset</figcaption>
-				</figure>
+				<p>
+					let <code>num</code> be the amount of vehicles<br />
+					let <code>pos</code> be the vehicle's position (#1, #2, #3, &hellip;)<br />
+					let <code>ww</code> be the tool's work width<br />
+					the tool's offset is:
+					<pre>( pos - ( (num + 1) / 2 ) ) * ww</pre>
+				</p>
 
+				<noscript>Please enable Javascript to proceed.</noscript>
 
 				<p>But, we have also built a tool for calculating the correct offset settings for multiple tools:</p>
 
-				<noscript>Please enable Javascript to proceed.</noscript>
-
 				<div id="offsetCalculator">
-					<h5>The lane offset calculator</h5>
-
 					<div id="textElements">
 						<sub data-lang="en" data-text="courseWorkWidth">Course work width</sub>
 						<sub data-lang="en" data-text="tool">Tool</sub>
@@ -157,7 +160,7 @@
 								<option value="8">8</option>
 							</select>
 							<span id="amountText">2</span>
-							<span id="amountplus" class="hudIcon plus inline">+</span>&nbsp;<span id="amountminus" class="hudIcon minus inline hidden">-</span>
+							<span id="amountplus" class="icon-plus inline"></span>&nbsp;<span id="amountminus" class="icon-minus inline hidden"></span>
 						</fieldset>
 
 						<fieldset>

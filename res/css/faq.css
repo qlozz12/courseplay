@@ -37,7 +37,10 @@ body.js .singleFaq h2:active {
 }
 
 
-
+#faqOffset h3 {
+	margin-top:2em;
+	margin-bottom:0;
+}
 
 /* OFFSET CALCULATOR */
 #offsetCalculator { border-top:2px solid #c6c6c6; margin-top:20px; padding-top:20px; position:relative; }
@@ -67,8 +70,11 @@ body.js .singleFaq h2:active {
 
 #amount { display:none; }
 #amountText { margin-right:15px; }
-.hudIcon { cursor:pointer !important; }
-.hudIcon.hidden { cursor:default !important; opacity: 0; }
+span[class^="icon-"] { cursor:pointer !important; }
+span[class^="icon-"].hidden { cursor:default !important; opacity: 0; }
+span[class^="icon-"]:hover, span[class^="icon-"]:active {
+	color:#FC0;
+}
 #save { display:none; position:absolute; right:0; top:50px; }
 
 figure { margin-top:1em; margin-bottom:1em; }
@@ -152,3 +158,6 @@ figcaption {
 	box-shadow: inset 0 2px 5px -3px rgba(0,0,0,0.5);
 }
 
+.hidden {
+	display:none;
+}
