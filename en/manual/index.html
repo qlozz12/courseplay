@@ -54,7 +54,7 @@
 							<a href='#hud'><span>HUD</span></a>
 							<ul>
 								<li><a href="#hud_driverControls"><span class="icon-page1"></span><span>Driver controls</span></a></li>
-								<li><a href="#hud_saveCourse"><span class="icon-page2"></span><span>Save course</span></a></li>
+								<!--<li><a href="#hud_saveCourse"><span class="icon-page2"></span><span>Save course</span></a></li>-->
 								<li><a href="#hud_manageCourses"><span class="icon-page2"></span><span>Manage courses</span></a></li>
 								<li><a href="#hud_mode2settings"><span class="icon-page3"></span><span>Combi mode settings</span></a></li>
 								<li><a href="#hud_manageCombine"><span class="icon-page4"></span><span>Manage combines</span></a></li>
@@ -110,7 +110,7 @@
 	<!-- ------------------------------------------------------------------------------------------- -->
 
 	<main id="manual" role="main" class="content">
-		<h1>Manual <span id="manualVersion">valid for v3.41</span></h1>
+		<h1>Manual <span id="manualVersion">valid for v4.00</span></h1>
 
 		<hr />
 
@@ -149,29 +149,59 @@
 				<ul>
 					<li>
 						<h4>Start recording</h4>
-						<p>With this option, Courseplay's recording mode is activated. You can drive and record the course that the driver should use later. Upon activating, three eggs at an interval of ca. 10 to 20 m will be displayed at the start. You should make sure to go more or less straight until reaching the third egg (third waypoint).</p>
-						<p>When recording is active, you can deactivate mouse controls by clicking the right mouse buttons, so you can look around while driving and recording.</p>
+						<p>With this option, Courseplay's recording mode is activated. You can drive and record the course that the driver should use later. When recording is active, you can deactivate mouse controls by clicking the right mouse button, so you can look around while driving and recording.</p>
+						<p>See: <span class="emphasize2">"Recording mode"</span></p>
 					</li>
 					<li>
-						<h4>Pause recording</h4>
-						<p>While recording you can pause the recording with this option. A yellow arrow will be display, showing the direction to the last waypoint. In addition, while paused you can delete the last waypoints, respectively.</p>
+						<h4>Calculate current field's edge path</h4>
+						<!-- TODO <p>See also: <a href="#" class="internal">field scanner</a></p> -->
+						<p>While standing on a field, the field's edge/border path can be scanned. It is then displayed as blue lines and yellow dots (can be toggled with <span class="icon-eye inline"></span>).</p>
+						<p>If you want to save the edge path, choose a new field number for it with <span class="icon-arrowUp inline"></span>/<span class="icon-arrowDown inline"></span>. If a field edge path with that number already exists, you can overwrite it, otherwise your can add the path to the list.</p>
+						<p>Each manually scanned field is saved in the <code>courseplayFields.xml</code> file and loaded with the savegame.</p>
+					</li>
+				</ul>
+			</section>
+			<section class="manualSubSection">
+				<h3>Recording mode</h3>
+				<p>During the recording of a course, Each newly recorded waypoint will be displayed with an orange pyramid dummy. Multiple buttons are displayed that let you influence the waypoints' settings. The buttons' functions are displayed as a tooltip when hovering over them.</p>
+				<p>You should make sure to go more or less straight until reaching the third waypoint.</p>
+				<p>The recorded course is only temporary: the next time you start the savegame, it will be gone, unless you save it first. (See: <a href="#hud_manageCourses" class="internal"><span class="icon-page2"></span> Manage courses</a>)</p>
+				<ul>
+					<li>
+						<h4><span class="icon-recordingStop"></span>Stop recording</h4>
+						<p>When reaching the end point of your route, use "stop recording". It is advised to have the end point ca. 5 to 10 m before the start point, and for it to have about the same direction as the start point. Meaning: don't stop at a south direction while the course's start direction is north.</p>
 					</li>
 					<li>
-						<h4>Stop recording</h4>
-						<p>This option is only available during recording. When reaching the end point of your route, use "stop recording". It is advised to have the end point ca. 5 to 10 m before the start point, and for it to have about the same direction as the start point. Meaning: don't stop at a south direction while the course's start direction is north.</p>
+						<h4><span class="icon-recordingPause"></span>Pause recording</h4>
+						<p>Pause the current recording. This option is only available after the third waypoint. A yellow arrow will be displayed, showing the direction to the last waypoint. Click the pause button again to continue. In addition, while paused you can delete the last waypoint (see <span class="emphasize2">"delete last waypoint"</span>).</p>
 					</li>
 					<li>
-						<h4>Set waiting point</h4>
-						<p>While recording, you have the possibility to set waiting points on the course. At those points, the driver, while driving the course, will stop and wait until either you tell him to continue, or the configured waiting time has passed. When a driver reaches a waiting point, a message will be displayed (<code>XYZ has reached waiting point.</code>).</p>
+						<h4><span class="icon-recordingDeleteWaypoint"></span>Delete last waypoint</h4>
+						<p>This option is only available when the recording is paused. The current last waypoint is deleted. You can repeat this until only three waypoints are left.</p>
 					</li>
 					<li>
-						<h4>Set crossing point</h4>
-						<p>Crossing points are "signal" or "combination points" where two separate courses can be combined (see <a href="#hud_manageCourses" class="internalTab">Manage courses</a>). In both courses, two crossing points (one in each course) that are closer to each other than 50 metres are determined. The combined course will lead up until the first course's crossing point, and from there go the second course from its respective crossing point.</p>
+						<h4><span class="icon-waitPointSign"></span>Set waiting point</h4>
+						<p>While recording, you have the possibility to set waiting points on the course. At those points, the driver, while driving the course, will stop and wait until either you tell him to continue, or the configured <a href="#hud_generalSettings" class="internal">waiting time</a> has passed. When a driver reaches a waiting point, a message will be displayed (<code>XYZ has reached waiting point.</code>).</p>
+						<p>In certain modes, waiting points have special meanings, other than waiting: in the <a href="#driveMode4" class="internal"><span class="icon-mode4single"></span> fertilizer/seeding</a> and <a href="#driveMode6" class="internal"><span class="icon-mode6single"></span> field work</a> modes, they indicate the start and end of the work area, and - if using a bale loader - the unloading point. In the <a href="#driveMode9" class="internal"><span class="icon-mode9single"></span> shovel filling and unloading</a> mode, they indicate the start and end of the loading area and the unloading point.</p>
+					</li>
+					<li>
+						<h4><span class="icon-crossSign"></span>Set crossing point</h4>
+						<p>Crossing points are "signal" or "combination points" where two separate courses can be combined (see <a href="#hud_manageCourses" class="internal"><span class="icon-page2"></span> Manage courses</a>). In both courses, two crossing points (one in each course) that are closer to each other than 50 metres are determined. The combined course will lead up until the first course's crossing point, and from there go the second course from its respective crossing point.</p>
 						<figure>
 							<img src="../../res/img/crossingPoints_en.png" alt="Crossing points diagram" class="infoImg">
-							<figcaption>Fig. 1: Combination of two courses at their crossing points</figcaption>
+							<figcaption>Combination of two courses at their crossing points</figcaption>
 						</figure>
 						<p><span class="emphasize1">Note:</span> A course's start and stop points are automatically set as crossing points. Hence, they don't have to be manually declared as those when recording.</p>
+					</li>
+					<li>
+						<h4><span class="icon-recordingTurn"></span>Start/finish turn maneuver</h4>
+						<p>While it is generally advised to have field courses generated, they can also be recorded manually. Setting the turn maneuver later tells the driver to do a turn maneuver on his own at this point - meaning lifting and/or turning off the tool. Clicking once activates the turn maneuver (the button turns green), clicking it again ends it.</p>
+					</li>
+					<li>
+						<h4><span class="icon-recordingReverse"></span>Reverse driving</h4>
+						<p>Courseplay supports reverse driving with trailers in many modes. Activating this option later tells the driver to drive this portion of the course in reverse. You should only activate and deactivate it once you're at a complete stop and not rolling anymore. When active during the recording, you must drive in reverse, otherwise there will be severe driving errors later. Clicking once activates the reverse mode (the button turns green), clicking it again ends it.</p>
+						<!-- TODO section about reverse driving/with trailers -->
+						<!-- TODO link to that section here -->
 					</li>
 				</ul>
 			</section>
@@ -180,22 +210,31 @@
 				<ul>
 					<li>
 						<h4>Drive course</h4>
-						<p>When you have recorded or loaded a course, you can "hire" a driver to have him drive the course. From this moment, you won't have any manual control over the tractor.</p>
-					</li>
-					<li>
-						<h4>Change mode</h4>
-						<p>In order to being able to do many different work types, there are different driving modes. The current mode will be displayed in the bottom section of the hud. By clicking "change mode", you can iterate through the different modes.</p>
-						<p>Alternatively you can use the nine buttons on the righthand side of the hud. They have the advantage of choosing the desired mode directly.</p>
-						<p>The different modes are described in detail in the <a class="internalTab" href="#driveModes">Driving modes</a> section.</p>
-					</li>
-					<li>
-						<h4>Delete waypoints</h4>
-						<p>When a course has been recorded or loaded, you can delete the current course selection. The saved course will not be deleted from the save game, only the driver will clear his current course.</p>
+						<p>When you have recorded or loaded a course, you can "hire" a driver to have him drive the course. From this moment on, you won't have any manual control over the tractor until you stop the driver.</p>
 					</li>
 					<li>
 						<h4>Start course at&hellip;</h4>
-						<p class="emphasize2">Available in all modes except "Fill and empty shovel"</p>
-						<p>Some courses have relatively many waypoints in a small area, especially at the starting point (e.g. generated courses with headland). Here you can choose if the driver starts the course at the nearest waypoint (default setting) or directly at the first waypoint.</p>
+						<p class="emphasize2"><span class="icon-infoSign inline"></span>Available in all modes except "Fill and empty shovel"</p>
+						<p>Some courses have relatively many waypoints in a small area, especially at the starting point (e.g. generated courses with headland). Here you can choose if the driver starts the course at the nearest waypoint (default setting), the current wapypoint or directly at the first waypoint.</p>
+					</li>
+					<li>
+						<h4>Farm silo load</h4>
+						<p class="emphasize2"><span class="icon-infoSign inline"></span>Only available in grain transport mode</p>
+						<p>With this option you can choose the silo fruit type to be filled into the trailer at the course's start point. Each tractor can have a different selected fill type, allowing for multiple different routes from that silo running at the same time. This setting is saved in the <code>vehicles.xml</code> file.</p>
+					</li>
+					<li>
+						<h4>Change mode</h4>
+						<span style="font-size:1.5em;"><span class="icon-mode1block"></span> <span class="icon-mode2block"></span> <span class="icon-mode3block"></span> <span class="icon-mode4block"></span> <span class="icon-mode5block"></span> <span class="icon-mode6block"></span> <span class="icon-mode7block"></span> <span class="icon-mode8block"></span> <span class="icon-mode9block"></span></span>
+						<p>In order to being able to do many different work types, there are different driving modes. Certain modes are only available for certain types of vehicles. For example, a tractor won't be allowed to drive in the <a href="#driveMode7" class="internal"><span class="icon-mode7single"></span> combine self unloading</a> mode. The current mode will be highlighted in green. The mode names are display as a tooltip when hovering over the buttons.</p>
+						<p>The different modes are described in detail in the <a class="internalTab" href="#driveModes">Driving modes</a> section.</p>
+					</li>
+					<li>
+						<h4><span class="icon-clearCourse"></span>Clear course</h4>
+						<p>When a course has been recorded or loaded, you can delete the current course selection. The saved course will not be deleted from the save game, only the driver will clear his current course.</p>
+					</li>
+					<li>
+						<h4><span class="icon-search"></span>Search for first waypoint</h4>
+						<p>With this option activated, the direction and distance to the course's first waypoint (in relation to the tractor) are displayed. This can be useful if you don't remember where the course's start is.</p>
 					</li>
 				</ul>
 			</section>
@@ -207,13 +246,26 @@
 						<p>Of course you can always stop the activated driver. Later, when reactivating the driver, it will continue from the next valid waypoint.</p>
 					</li>
 					<li>
-						<h4>continue</h4>
+						<h4>Drive now</h4>
+						<p>When you're driving a "filling" course, for example unloading a combine in combi mode, or collecting grass in field work mode, you can force the driver to drive the unloading portion of the route immediately.</p>
+					</li>
+					<li>
+						<h4>Continue</h4>
 						<p>When a driver has reached a waiting point, you can manually tell him to continue.</p>
 					</li>
 					<li>
+						<h4>Stop at last point or trigger</h4>
+						<p>When activated, the tractor will stop at the next valid unloading or fill trigger, or - if no triggers exist on that route - at the end of the route.</p>
+					</li>
+					<li>
 						<h4>Ridge markers</h4>
-						<p class="emphasize2">Available only in "fertilizing and seeding" mode</p>
-						<p>When using a seeder with a generated course, choose wether the ridge markers should be deployed automatically or manually (i.e. you control them).</p>
+						<p class="emphasize2"><span class="icon-infoSign inline"></span>Available only in "fertilizing and seeding" mode</p>
+						<p>When using a seeder with a generated course, choose wether the ridge markers should be deployed automatically or manually (i.e. you control them). This setting is saved in the <code>vehicles.xml</code> file.</p>
+					</li>
+					<li>
+						<h4>Unloading on field</h4>
+						<p class="emphasize2"><span class="icon-infoSign inline"></span>Available only in "field work" mode, with an attached bale loader and with <span class="emphasize3">no unloading course</span> existing after the field work course</p>
+						<p>If activated, the bale loader will unload the bales automatically on the field when 100% full.</p>
 					</li>
 				</ul>
 			</section>
@@ -221,50 +273,75 @@
 
 		<!-- #################### -->
 
-		<article class="manualSection" id="hud_saveCourse">
+		<article class="manualSection" id="hud_manageCourses">
+			<!--
 			<h2>HUD: Saving the course</h2>
 			<p>In the bottom section of the hud there is a disc icon <span class="icon-save inline" title="save course"></span>. After recording a course, you can save it by clicking the disc. In the upper part of the screen a text input will be shown where you can name the course. Confirm with <kbd title="return">ENTER</kbd> (Return).</p>
-		</article>
+			-->
 
-		<!-- #################### -->
-
-		<article class="manualSection" id="hud_manageCourses">
 			<h2>
 				<span class="icon-page2"></span>
 				HUD: Manage courses
 			</h2>
-			<p>On this page you'll find an overview containing your saved courses. The list can be scrolled through by using the up/down arrows <span class="icon-arrowUp inline" title="up arrow"></span>/<span class="icon-arrowDown inline" title="down arrow"></span> near the hud's right edge.</p>
+			<p>On this page you'll find an overview containing your saved courses and folders. The list can be scrolled through by using the up/down arrows <span class="icon-arrowUp inline" title="up arrow"></span>/<span class="icon-arrowDown inline" title="down arrow"></span> near the hud's right edge, or by using the mouse wheel.</p>
+			<p>The course management system basically works like a regular file system. You can create folders, move courses or other folders to it, and load and delete them. The courses and folders are saved in the <code>courseplay.xml</code> file.</p>
 
 			<dl class="buttonInfo">
 				<dt>Default change</dt>
-				<dd>6 courses</dd>
+				<dd>8 lines (mouse wheel: 1 line)</dd>
 				<div class="clearfix"></div>
 				<dt><kbd title="Control">CTRL</kbd> change</dt>
-				<dd>12 courses</dd>
+				<dd>16 lines (mouse wheel: 8 lines)</dd>
 				<div class="clearfix"></div>
 			</dl>
 
-			<p>Each course has three options, respectively:
+			<section class="manualSubSection" style="border-top:2px dashed #BBB; padding-top:1em;">
+				<h3>General actions</h3>
+				<ul>
+					<li>
+						<h4><span class="icon-clearCourse"></span>Clear course</h4>
+						<p>In order to record or load a completely new course, the current course must be cleared with this option. The course will not be deleted from the save game, only the driver will clear his current course.</p>
+					</li>
+					<li>
+						<h4><span class="icon-search"></span>Search for courses and folders</h4>
+						<p>This option lets you filter your course and folder list. A GUI will open where you can enter the name. When the filter is active, you can deactivate it by clicking <span class="icon-cancel inline" title="cancel button"></span>.</p>
+					</li>
+					<li>
+						<h4><span class="icon-newFolder"></span>Create new folder</h4>
+						<p>Creates a new folder on the base level. A GUI will open where you can enter the name.</p>
+					</li>
+					<li>
+						<h4><span class="icon-save"></span>Save course</h4>
+						<p>Saves the currently active course as a new course in the file system. A GUI will open where you can enter the name.</p>
+					</li>
+				</ul>
+			</section>
+
+			<section class="manualSubSection">
+				<h3>Course actions</h3>
 				<ul>
 					<li>
 						<h4><span class="icon-loadMergeCourse" title="Load/merge course"></span> Load/merge</h4>
-						<p>Loading the course. If there already is a course loaded, the clicked course will be combined with the already loaded one at the first common <a href="#hud_driverControls" class="internalTab">crossing point</a>. In both courses, two crossing points (one in each course) that are closer to each other than 50 metres are determined. The combined course will lead up until the first course's crossing point, and from there go the second course from its respective crossing point.</p>
+						<p>Loading the course. If there already is a course loaded, the clicked course will be merged into the already loaded one at the first common <a href="#hud_driverControls" class="internalTab"><span class="icon-crossSign"></span> crossing point</a>. In both courses, two crossing points (one in each course) that are closer to each other than 50 metres are determined. The combined course will lead up until the first course's crossing point, and from there go the second course from its respective crossing point.</p>
 						<figure>
 							<img src="../../res/img/crossingPoints_en.png" alt="Crossing points diagram" class="infoImg">
-							<figcaption>Fig. 1: Combination of two course at crossing points</figcaption>
+							<figcaption>Combination of two courses at crossing points</figcaption>
 						</figure>
 					</li>
 					<li>
 						<h4><span class="icon-courseAppend" title="Append course"></span> Append</h4>
-						<p>If there already is a course loaded, the clicked course will be added at the end of the already loaded course.</p>
+						<p>If there already is a course loaded, the clicked course will be added at the end of the already loaded course. Otherwise it will be loaded as usual.</p>
 					</li>
 					<li>
 						<h4><span class="icon-delete" title="Delete course/folder"></span> Delete</h4>
 						<p>The course will be deleted completely from Courseplay and the save game. It will not be available anymore, not even when loading the game again.</p>
 					</li>
+					<li>
+						<h4><span class="icon-courseMoveToFolder" title="Move to folder"></span> Move to folder</h4>
+						<p>The course (or folder) will be moved to the then selected folder.</p>
+					</li>
 				</ul>
-			</p>
-			<p>In order to record or load a completely new course, the current course must be cleared. See <a href="#hud_driverControls" class="internalTab">Driver controls</a> > "Delete waypoints".</p>
+			</section>
 		</article>
 
 		<!-- #################### -->
@@ -274,8 +351,8 @@
 				<span class="icon-page3"></span>
 				HUD: Combi mode settings
 			</h2>
-			<p class="emphasize2">This page is displayed in all modes except "Transfer", "Field work" and "Fill and empty shovel".</p>
-			<p>Just like the name implies, these settings are for the combi and overload modes. You can configure your driver to be better suited to unload the combine. The values can be changed by clicking the <span class="icon-plus inline" title="plus"></span>/<span class="icon-minus inline" title="minus"></span> buttons on the right hand side (bigger steps with pressed <kbd title="Control">CTRL</kbd> key).</p>
+			<p class="emphasize2"><span class="icon-infoSign inline"></span>This page is displayed in all modes except "Transfer", "Field work" and "Fill and empty shovel".</p>
+			<p>Just like the name implies, these settings are for the combi and overload modes. You can configure your driver to be better suited to unload the combine. In addition there is one option for the "fertilizer/seeding" and "liquid manure transport" modes. The values can be changed by clicking the <span class="icon-plus inline" title="plus"></span>/<span class="icon-minus inline" title="minus"></span> buttons on the right hand side (bigger steps with pressed <kbd title="Control">CTRL</kbd> key) or the mouse wheel.</p>
 			<ul>
 				<li>
 					<h4>Side offset</h4>
@@ -338,6 +415,19 @@
 						<div class="clearfix"></div>
 					</dl>
 				</li>
+				<li>
+					<h4>Refill until percentage</h4>
+					<p class="emphasize2"><span class="icon-infoSign inline"></span>This option is only displayed in "fertilizer/seeding" and "liquid manure transport" modes.</p>
+					<p>This value defines the fill level percentage that a sprayer, seeder etc. fills up at a trigger.</p>
+					<dl class="buttonInfo">
+						<dt>Default change</dt>
+						<dd>1%</dd>
+						<div class="clearfix"></div>
+						<dt><kbd title="Control">CTRL</kbd> change</dt>
+						<dd>5%</dd>
+						<div class="clearfix"></div>
+					</dl>
+				</li>
 			</ul>
 		</article>
 
@@ -348,8 +438,8 @@
 				<span class="icon-page4"></span>
 				HUD: Manage combines
 			</h2>
-			<p class="emphasize2">This page is displayed only in the "combine" and "overloader" modes.</p>
-			<p>These settings are only relevant for the combine and overloader modes. You can choose between the driver looking for a combine in need automatically (the default setting), or have a assigned, non-changing combine (manual). If the driver has been assigned manually to a combine, it doesn't have to be on the same field as the combine in order to find it. The driver drives from his start point to the combine, no matter where it is.</p>
+			<p class="emphasize2"><span class="icon-infoSign inline"></span>This page is displayed only in the "combi" and "overloader" modes.</p>
+			<p>These settings are only relevant for the combi and overloader modes. You can choose between the driver looking for a combine in need automatically (the default setting), or have an assigned, non-changing combine (manual). If the driver looks for combines automatically, it has to be on the same field as the combine in order to find it. If the driver has been assigned manually to a combine, it can be outside of the field area not. The driver drives from his start point to the combine, no matter where it is.</p>
 			<p>This can be useful for big and hilly fields where the automatic assignment doesn't always work. Or for areas which aren't fields, like meadows.</p>
 		</article>
 
@@ -360,7 +450,7 @@
 			</h2>
 			<p>Here you can set how fast your driver should drive. Also, you can choose if a course should be driven with the speed used during the recording, or the maximum speed.</p>
 			<p>Switching <code>Speed: from recording</code> and <code>Speed: maximum speed</code> determines if the speed used during the recording or the set maximum speed should be used.</p>
-			<p>ESLimiter version 3.0 and upwards is supported.</p>
+			<p>Note: the unloading speed is also used for reversing.</p>
 			<dl class="buttonInfo">
 				<dt>Default change</dt>
 				<dd>1 kph / 0.6 mph</dd>
@@ -381,8 +471,9 @@
 			<ul>
 				<li>
 					<h4>Path finding</h4>
-					<p>If path finding is activated (only in combi and overload modes), the driver tries as best as possible not to drive through the fruit.</p>
-					<p>On the one hand this means that on the way to the combine/chopper he drives around the fruit. On the other hand it means that he won't drive to unload a combine if the combine's pipe is on the fruit pipe. The driver will only start if either the pipe is on the non-fruit side, or the combine is 100% full (ignoring the <code>Start&nbsp;at&nbsp;%</code> setting).</p>
+					<span class="emphasize2"><span class="icon-infoSign inline"></span>Only available in "combi" and "overload" modes</span>
+					<p>When activated, the driver tries as best as possible not to drive through the fruit. On the one hand this means that on the way to the combine/chopper he drives around the fruit. On the other hand it means that he won't drive to unload a combine if the combine's pipe is on the fruit pipe. The driver will only start if either the pipe is on the non-fruit side, or the combine is 100% full (ignoring the <code>Start&nbsp;at&nbsp;%</code> setting).</p>
+					<span class="emphasize3"><span class="icon-infoSign inline"></span>At the moment, the "driving around the fruit" part of this option is deactivated, as we're reworking it completely. We plan to reimplement it in the next release.</span>
 				</li>
 				<li>
 					<h4>Open Courseplay</h4>
@@ -393,22 +484,9 @@
 					<p>Choose which course waypoints should be displayed.</p>
 				</li>
 				<li>
-					<h4>Beacon lights</h4>
-					<p>Choose if and when the beacon lights should be activated.</p>
+					<h4>Warning lights</h4>
+					<p>Choose if and when the beacon and hazard lights should be activated.</p>
 				</li>
-				<li>
-					<h4>Debug-Level</h4>
-					<p>Should there be any problems with Courseplay, you can set the debug level to limit the depth of error information shown in the log. This is important information for the developers, so they can find and fix errors.</p>
-				</li>
-			</ul>
-		</article>
-
-		<article class="manualSection" id="hud_drivingSettings">
-			<h2>
-				<span class="icon-page7"></span>
-				HUD: Drive and work settings
-			</h2>
-			<ul>
 				<li>
 					<h4>Waiting time</h4>
 					<p>By default, drivers stop and wait at waiting points (except for field work and fertilizing/seeding modes), until the driver is told explicitly to continue (waiting time = 0 sec). When a waiting time has been set (above 0 sec), the driver waits at the waiting point until that set time has passed and then continues automatically. This can be useful for, e.g., a weight station at a BGA.</p>
@@ -422,8 +500,50 @@
 					</dl>
 				</li>
 				<li>
-					<h4>horizontal offset</h4>
-					<p>Only for field work and fertilizing/seeding modes. For some tools it might be import not to drive the course exactly in the center line, but slightly to the right or to the left (e.g. bale collectors). This offset can be set here.</p>
+					<h4>Map icons: display text</h4>
+					<span class="emphasize2"><span class="icon-infoSign inline"></span>Only available if map icons are activated</span>
+					<p>This options activates / deactivates the text shown on the ingame map under the CP vehicles icons.</p>
+				</li>
+				<li>
+					<h4>Debug channels</h4>
+					<p>Should there be any problems with Courseplay, you can activate debug channels that provide prints in the game's log. This is important information for the developers, so they can find and fix errors.</p>
+					<span class="emphasize2"><span class="icon-infoSign inline"></span>Don't use this unless the developers ask you to!</span>
+				</li>
+			</ul>
+		</article>
+
+		<article class="manualSection" id="hud_drivingSettings">
+			<h2>
+				<span class="icon-page7"></span>
+				HUD: Drive and work settings
+			</h2>
+			<ul>
+				<li>
+					<h4>Lane offset</h4>
+					<span class="emphasize2"><span class="icon-infoSign inline"></span>Only available in "fertilizing/seeding" and "field work" modes</span>
+					<p>When you have multiple tools driving the same field course, use this option to set their effective lanes.</p>
+					<span class="emphasize1">See the <a href="../faq/index.html">FAQ</a></span> for further information <span class="emphasize2">(&ldquo;How to use the offset? — a.k.a. how do I let multiple vehicles drive a fieldwork course?&rdquo;)</span>.
+					<dl class="buttonInfo">
+						<dt>Default change</dt>
+						<dd>0.1 m</dd>
+						<div class="clearfix"></div>
+						<dt><kbd title="Control">CTRL</kbd> change</dt>
+						<dd>0.5 m</dd>
+						<div class="clearfix"></div>
+					</dl>
+				</li>
+				<li>
+					<h4>Symmetric lane change</h4>
+					<span class="emphasize2"><span class="icon-infoSign inline"></span>Only available in "fertilizing/seeding" and "field work" modes, and only if the lane offset is not zero</span>
+					<p>This options determines the type of lane change for a vehicle driving with lane offset.</p>
+					<p><span class="emphasize2">Regular lane change</span>: the vehicle always drives left/right of its lane.</p>
+					<p><span class="emphasize2">Symmetric lane change</span>: The tool switches from left to right / right to left each lane, thus creating a symmetric pattern.</p>
+					<span class="emphasize1">See the <a href="../faq/index.html">FAQ</a></span> for further information <span class="emphasize2">(&ldquo;How to use the offset? — a.k.a. how do I let multiple vehicles drive a fieldwork course?&rdquo;)</span>.
+				</li>
+				<li>
+					<h4>Tool offset horizontal</h4>
+					<span class="emphasize2"><span class="icon-infoSign inline"></span>Only available in "overloader", "fertilizing/seeding" and "field work", "combine self-unloading" and "liquid manure transporter" modes</span>
+					<p>For some tools it might be important not to drive the course exactly in the center line, but slightly to the right or to the left (e.g. bale collectors). This option lets you set this offset. It can also be used for filling / overloading points, to accommodate different vehicle sizes on the same course.</p>
 					<dl class="buttonInfo">
 						<dt>Default change</dt>
 						<dd>0.5 m</dd>
@@ -434,8 +554,9 @@
 					</dl>
 				</li>
 				<li>
-					<h4>vertical offset</h4>
-					<p>Only for field work and fertilizing/seeding modes. Identical to the horizontal offset, only that the driver drivers further ahead/behind the actual course.</p>
+					<h4>Tool offset vertical</h4>
+					<span class="emphasize2"><span class="icon-infoSign inline"></span>Only available in "overloader", "fertilizing/seeding" and "field work", "combine self-unloading" and "liquid manure transporter" modes</span>
+					<p> Identical to the horizontal offset, only that the driver drives further ahead/behind the actual course.</p>
 					<dl class="buttonInfo">
 						<dt>Default change</dt>
 						<dd>0.5 m</dd>
@@ -446,6 +567,11 @@
 					</dl>
 				</li>
 
+				<li>
+					<h4>Always use 4WD</h4>
+					<span class="emphasize2"><span class="icon-infoSign inline"></span>Only available if the DriveControl mod is installed</span>
+					<p>Courseplay automatically activates and eactivates 4WD depending on the situation and the course. This option forces 4WD to always be on.</p>
+				</li>
 				<li>
 					<h4>Copy course</h4>
 					<p>Lets you copy the exact course and waypoints from another vehicle. Also works with combined, generated or unsaved courses.</p>

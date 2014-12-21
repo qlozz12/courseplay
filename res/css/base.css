@@ -70,6 +70,9 @@ a:not(.imgLink):hover, a.hover:not(.imgLink), a:not(.imgLink):focus, a:not(.imgL
 }
 a.imgLink { display:block; padding:0; }
 
+a.internal { white-space:pre; }
+a.internal [class^="icon-"] { font-size:1.1em !important; }
+
 img {
 	max-width:100%;
 	height:auto;
@@ -183,7 +186,7 @@ h5 { font-size:1.2em; font-style:italic; margin:0 0 10px; }
 
 .emphasize1 { font-weight:500; }
 .emphasize2 { font-style:italic; }
-.emphasize3 { font-weight:600; font-style:italic; }
+.emphasize3 { font-weight:500; font-style:italic; }
 
 .iconLink { text-decoration:none; }
 
