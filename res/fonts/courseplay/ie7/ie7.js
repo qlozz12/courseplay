@@ -44,6 +44,8 @@
 		'icon-page7': '&#xe643;',
 		'icon-page8': '&#xe644;',
 		'icon-page9': '&#xe645;',
+		'icon-headlandClockwise2': '&#xe649;',
+		'icon-headlandCounterClockwise2': '&#xe64a;',
 		'icon-headlandClockwise': '&#xe628;',
 		'icon-headlandCounterClockwise': '&#xe629;',
 		'icon-headlandAfter': '&#xe61a;',

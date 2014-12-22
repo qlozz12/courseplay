@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'courseplay';
-	src:url('fonts/courseplay.eot?-87gh4q');
-	src:url('fonts/courseplay.eot?#iefix-87gh4q') format('embedded-opentype'),
-		url('fonts/courseplay.woff?-87gh4q') format('woff'),
-		url('fonts/courseplay.ttf?-87gh4q') format('truetype'),
-		url('fonts/courseplay.svg?-87gh4q#courseplay') format('svg');
+	src:url('fonts/courseplay.eot?u8xxuh');
+	src:url('fonts/courseplay.eot?#iefixu8xxuh') format('embedded-opentype'),
+		url('fonts/courseplay.woff?u8xxuh') format('woff'),
+		url('fonts/courseplay.ttf?u8xxuh') format('truetype'),
+		url('fonts/courseplay.svg?u8xxuh#courseplay') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -115,6 +115,12 @@
 }
 .icon-page9:before {
 	content: "\e645";
+}
+.icon-headlandClockwise2:before {
+	content: "\e649";
+}
+.icon-headlandCounterClockwise2:before {
+	content: "\e64a";
 }
 .icon-headlandClockwise:before {
 	content: "\e628";

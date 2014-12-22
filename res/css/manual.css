@@ -18,21 +18,10 @@ article:not(:target) { display:none; }
 
 
 .buttonInfo {
-	background: #555; /* Old browsers */
-	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzVhNWE1YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1MDUwNTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-	background: -moz-linear-gradient(top,  #5a5a5a 0%, #505050 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5a5a5a), color-stop(100%,#505050)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #5a5a5a 0%,#505050 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #5a5a5a 0%,#505050 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #5a5a5a 0%,#505050 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #5a5a5a 0%,#505050 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a5a5a', endColorstr='#505050',GradientType=0 ); /* IE6-8 */
-
-	border:1px solid #454545;
-	color:#f0f0f0;
-	border-radius:1px;
-	padding:6px 8px;
+	background: rgba(255,255,255,0.15);
+	border-top: 1px solid rgba(0,0,0,0.6);
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	padding: 0.5em 0.8em;
 }
 dl { margin-bottom:20px; }
 dt, dd {
@@ -48,20 +37,67 @@ dt { width: 30%; }
 .manualSection .manualSubSection:first-of-type { padding-top:0; }
 .manualSection .manualSubSection:last-of-type { border-bottom:none; padding-bottom:0; }
 
-.manualSection ol li { 
+/* .manualSection ol li { 
 	margin-top:20px; 
 	margin-bottom:20px; 
+} */
+
+.manualSection > ul, .manualSubSection > ul {
+	margin:0;
+	list-style:none;
 }
-/* .manualSection li:first-of-type { padding-top:0; } */
-.manualSection ul li { border-top:1px dashed #CCC; padding-top:10px; padding-bottom:10px; }
-.manualSection ul li:first-of-type { border-top:none; }
-#driveModes > ol > li { margin-top:1em; margin-bottom:1em; }
+.manualSection > ul > li, .manualSection > ol > li, .manualSubSection > ul > li {
+	background:rgba(0,0,0,0.35);
+	border-top:1px solid rgba(255,255,255,0.15);
+	border-right:1px solid rgba(0,0,0,0.4);
+	border-bottom:1px solid rgba(0,0,0,0.4);
+	padding:0 0 0.5em;
+	margin: 0.8em 0;
+}
+.manualSection > ul > li:first-of-type, .manualSection > ol > li:first-of-type, .manualSubSection > ul > li:first-of-type { margin-top:0; }
+.manualSection > ul > li:last-of-type, .manualSection > ol > li:last-of-type, .manualSubSection > ul > li:last-of-type { margin-bottom:0; }
+.manualSection > ul > li > h4 {
+	margin-bottom:0.5em;
+}
+.manualSection > ul > li > h4, .manualSubSection > ul > li > h4 {
+	margin-top:0;
+	padding:0.5em 0.8em;
+}
+
+.manualSection > ul > li > span, .manualSubSection > ul > li > span, 
+.manualSection > ul > li > p, .manualSection > ol > li > p, .manualSubSection > ul > li > p, 
+.manualSection > ul > li > dl, .manualSubSection > ul > li > dl,
+.manualSection > ul > li > figure, .manualSection > ol > li > figure, .manualSubSection > ul > li > figure {
+	margin:0.5em 0.8em;
+}
+.manualSection > ol > li:before {
+	border-top:none;
+	left:0;
+	top:0;
+}
+.manualSection > ol > li {
+	padding-top:1.3em;
+}
+.manualSection > ul > li > ul, .manualSection > ol > li > ul, .manualSubSection > ul > li > ul, 
+.manualSection > ul > li > ol, .manualSubSection > ul > li > ol {
+	margin:0.5em 1.8em;
+}
+p.info {
+	background:rgba(255,255,255,0.1);
+	padding:0.5em 0.8em !important;
+	font-style:italic;
+}
+.manualSection > p.info {
+	margin-bottom:1em;
+}
+
+#driveModes > ol > li { margin-top:1em; margin-bottom:1em; padding-top: 1.8em; padding-left:0.8em; }
 #driveModes [class^="icon-"] { font-size: 1.2em; }
 h4 [class^="icon-"] { font-size:1.1em !important; margin-right:0.7em !important; }
 
 figure { margin-top:1em; margin-bottom:1em; }
 img.infoImg {
-	border:1px solid #d6d6d6;
+	border:1px solid rgba(255,255,255,0.35);
 	padding:5px;
 	width:100%;
 	max-width:100%;
@@ -76,6 +112,9 @@ figcaption {
 }
 
 .manualSection h3, .manualSection h4 { display:inline-block; }
+
+
+/* TODO: image lightbox: apply -webkit-filter on #container: blur(0.2em) grayscale(50%) brightness(50%) */
 
 
 /* MEDIA QUERIES */
