@@ -96,16 +96,6 @@ p.info {
 h4 [class^="icon-"] { font-size:1.1em !important; margin-right:0.7em !important; }
 
 figure { margin-top:1em; margin-bottom:1em; }
-img.infoImg {
-	border:1px solid rgba(255,255,255,0.35);
-	padding:5px;
-	width:100%;
-	max-width:100%;
-}
-img.origSize {
-	width:auto !important;
-	max-width:auto !important;
-}
 figcaption {
 	font-family:'ACaslonPro-Italic', Caslon, 'Caslon Pro', Garamond, serif;
 	font-style:italic;

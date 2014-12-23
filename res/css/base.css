@@ -322,6 +322,17 @@ h4 span[class^="icon-"] {
 	text-align:center;
 }
 
+img.infoImg {
+	border:1px solid rgba(255,255,255,0.35);
+	padding:5px;
+	width:100%;
+	max-width:100%;
+}
+img.origSize {
+	width:auto !important;
+	max-width:auto !important;
+}
+
 
 footer {
 	background:rgba(0,0,0,0.9);
