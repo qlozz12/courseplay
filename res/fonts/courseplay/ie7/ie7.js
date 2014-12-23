@@ -13,6 +13,10 @@
 		el.innerHTML = '<span style="font-family: \'courseplay\'">' + entity + '</span>' + html;
 	}
 	var icons = {
+		'icon-cloud-download': '&#xe9c2;',
+		'icon-github4': '&#xeab4;',
+		'icon-english': '&#xe64b;',
+		'icon-german': '&#xe64c;',
 		'icon-edit': '&#xe647;',
 		'icon-fix': '&#xe648;',
 		'icon-wiki': '&#xe646;',
