@@ -346,11 +346,11 @@ footer {
 	right:0;
 	text-align:left;
 }
-#navFooter li { border-right:1px solid #646464; display:inline-block; padding:0 0.5em; }
-#navFooter li:last-of-type { border-right:0; padding-right:0; }
-#navFooter li:first-of-type { padding-left:0; }
+#navFooter li { border-left:1px solid #646464; display:inline-block; padding:0 0.5em; }
+#navFooter li:first-of-type { border-left-color:transparent; padding-left:0; }
+#navFooter li:last-of-type { padding-right:0; }
 
-footer .inactive { display:none; }
+footer .inactive { display:none !important; }
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 1250px) {
