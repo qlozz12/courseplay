@@ -23,6 +23,48 @@ body.js .singleFaq h2:active {
 	display:none;
 }
 
+/* -------------------------------- */
+
+#bugReport .faqContent > ul > li, #bugReport .faqContent > ol > li {
+	background:rgba(0,0,0,0.35);
+	border-top:1px solid rgba(255,255,255,0.15);
+	border-right:1px solid rgba(0,0,0,0.4);
+	border-bottom:1px solid rgba(0,0,0,0.4);
+	list-style:none;
+	padding:0 0 0.5em;
+	margin: 0.8em 0;
+}
+#bugReport .faqContent > ul > li:first-of-type, #bugReport .faqContent > ol > li:first-of-type { margin-top:0; }
+#bugReport .faqContent > ul > li:last-of-type, #bugReport .faqContent > ol > li:last-of-type { margin-bottom:0; }
+#bugReport .faqContent > ul > li > h4 {
+	margin-bottom:0.5em;
+}
+#bugReport .faqContent > ul > li > h4 {
+	margin-top:0;
+	padding:0.5em 0.8em;
+}
+
+#bugReport .faqContent > ul > li > span,
+#bugReport .faqContent > ul > li > p, #bugReport .faqContent > ol > li > p,
+#bugReport .faqContent > ul > li > dl,
+#bugReport .faqContent > ul > li > figure, #bugReport .faqContent > ol > li > figure {
+	margin:0.5em 0.8em;
+}
+#bugReport .faqContent > ol > li:before {
+	border-top:none;
+	left:0;
+	top:0;
+}
+#bugReport .faqContent > ol > li {
+	padding-top:1.3em;
+}
+#bugReport .faqContent > ul > li ul, #bugReport .faqContent > ol > li ul,
+#bugReport .faqContent > ul > li ol {
+	margin:0.5em 1.8em;
+}
+
+/* -------------------------------- */
+
 #faqToolSupport ul { margin:0; }
 #faqToolSupport li {
 	list-style-type:none;

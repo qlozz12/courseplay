@@ -18,15 +18,15 @@ a, a:before, a:after, button, button:before, div, fieldset, figure, h3, img, inp
 	-webkit-touch-callout: none;        
 }
 ::-moz-selection {
-	background: #353535;
+	background: #202020;
 	color: #fc950a;
 }
 ::-webkit-selection {
-	background: #353535;
+	background: #202020;
 	color: #fc950a;
 }
 ::selection {
-	background: #353535;
+	background: #202020;
 	color: #fc950a;
 }
 

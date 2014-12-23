@@ -5,7 +5,7 @@ CP = {};
 
 CP.animationTime = 250;
 CP.el = {
-	faqContent: $('div.faqContent'),
+	faqContent: $('.faqContent'),
 	faqTitles: $('.singleFaq').find('h2')
 };
 CP.el.faqContent.addClass('closed');
